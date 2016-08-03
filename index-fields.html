@@ -110,7 +110,7 @@
       var delta = instance.diff(left, right);
       // beautiful html diff
       document.getElementById('visual').innerHTML = jsondiffpatch.formatters.html.format(delta, left);
-      jsondiffpatch.formatters.html.showUnchanged($(this).is(':checked'), null, 800);
+      jsondiffpatch.formatters.html.showUnchanged($('#showunchanged').is(':checked'), null, 800);
       $('#showunchanged').on('change', function() {
         jsondiffpatch.formatters.html.showUnchanged($(this).is(':checked'), null, 800);
       });
