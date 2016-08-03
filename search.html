@@ -57,6 +57,12 @@
               <h3 class="panel-title">JSON Diff</h3>
             </div>
             <div class="panel-body">
+              <div class="header-options">
+                <input id="showunchanged" type="checkbox" checked>
+                <label for="showunchanged">
+                  Show unchanged values
+                </label>
+              </div>
               <div id="visual">
               </div>
             </div>
@@ -105,11 +111,19 @@
             return obj.name;
           }
           return '$$index:' + index;
+        },
+        arrays: {
+            detectMove: true,
+            includeValueOnMove: true
         }
       });
       var delta = instance.diff(left, right);
       // beautiful html diff
       document.getElementById('visual').innerHTML = jsondiffpatch.formatters.html.format(delta, left);
+      jsondiffpatch.formatters.html.showUnchanged($(this).is(':checked'), null, 800);
+      $('#showunchanged').on('change', function() {
+        jsondiffpatch.formatters.html.showUnchanged($(this).is(':checked'), null, 800);
+      });
       // self-explained json
       // document.getElementById('annotated').innerHTML = jsondiffpatch.formatters.annotated.format(delta, left);
     </script>
