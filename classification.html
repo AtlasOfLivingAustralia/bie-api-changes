@@ -1,0 +1,103 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://www.ala.org.au/commonui-bs3/css/ala-styles.css"> -->
+        <link rel="stylesheet" href="https://cdn.rawgit.com/benjamine/jsondiffpatch/master/public/formatters-styles/html.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/benjamine/jsondiffpatch/master/public/formatters-styles/annotated.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    </head>
+    <body>
+    <div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="page-header">
+        <h1>classification/urn:lsid:biodiversity.org.au:afd.taxon:31a9b8b8-4e8f-4343-a15f-2ed24e0bf1ae</h1>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Change notes</h3>
+        </div>
+        <div class="panel-body">
+          <p><code>rankId</code> has been removed and <code>rawRank</code> is now provided.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">JSON Diff</h3>
+            </div>
+            <div class="panel-body">
+              <div id="visual">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <h3>Old result</h3>
+          <pre>
+            [{&quot;rank&quot;:&quot;kingdom&quot;,&quot;rankID&quot;:1000,&quot;scientificName&quot;:&quot;ANIMALIA&quot;,&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:afd.taxon:4647863b-760d-4b59-aaa1-502c8cdf8d3c&quot;},{&quot;rank&quot;:&quot;phylum&quot;,&quot;rankID&quot;:2000,&quot;scientificName&quot;:&quot;CHORDATA&quot;,&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:afd.taxon:065f1da4-53cd-40b8-a396-80fa5c74dedd&quot;},{&quot;rank&quot;:&quot;subphylum&quot;,&quot;rankID&quot;:-1,&quot;scientificName&quot;:&quot;VERTEBRATA&quot;,&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:afd.taxon:5d6076b1-b7c7-487f-9d61-0fea0111cc7e&quot;},{&quot;rank&quot;:&quot;higher taxon&quot;,&quot;rankID&quot;:0,&quot;scientificName&quot;:&quot;GNATHOSTOMATA&quot;,&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:afd.taxon:ef5515fd-a0a2-4e16-b61a-0f19f8900f76&quot;},{&quot;rank&quot;:&quot;class&quot;,&quot;rankID&quot;:3000,&quot;scientificName&quot;:&quot;MAMMALIA&quot;,&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:afd.taxon:e9e7db31-04df-41fb-bd8d-e0b0f3c332d6&quot;},{&quot;rank&quot;:&quot;subclass&quot;,&quot;rankID&quot;:3200,&quot;scientificName&quot;:&quot;MARSUPIALIA&quot;,&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:afd.taxon:602afec4-950f-4961-9ad0-74793be8efbf&quot;},{&quot;rank&quot;:&quot;order&quot;,&quot;rankID&quot;:4000,&quot;scientificName&quot;:&quot;DIPROTODONTIA&quot;,&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:afd.taxon:bd223248-af12-4ce9-9380-4f9a85be38db&quot;},{&quot;rank&quot;:&quot;suborder&quot;,&quot;rankID&quot;:4200,&quot;scientificName&quot;:&quot;PHALANGERIDA&quot;,&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:afd.taxon:e6733776-808c-4aff-9758-e33223c5029f&quot;},{&quot;rank&quot;:&quot;superfamily&quot;,&quot;rankID&quot;:4500,&quot;scientificName&quot;:&quot;MACROPODOIDEA&quot;,&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:afd.taxon:894143f7-f712-40e1-96f1-418c93755acc&quot;},{&quot;rank&quot;:&quot;family&quot;,&quot;rankID&quot;:5000,&quot;scientificName&quot;:&quot;MACROPODIDAE&quot;,&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:afd.taxon:72e28d9f-375f-4728-bd99-d2b2a5d1f1f2&quot;},{&quot;rank&quot;:&quot;subfamily&quot;,&quot;rankID&quot;:5500,&quot;scientificName&quot;:&quot;MACROPODINAE&quot;,&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:afd.taxon:b5affee1-2306-4626-8d36-cfe961547d87&quot;},{&quot;rank&quot;:&quot;genus&quot;,&quot;rankID&quot;:6000,&quot;scientificName&quot;:&quot;Macropus&quot;,&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:afd.taxon:9e6a0bba-de5b-4465-8544-aa8fe3943fab&quot;},{&quot;rank&quot;:&quot;species&quot;,&quot;rankID&quot;:7000,&quot;scientificName&quot;:&quot;Macropus rufus&quot;,&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:afd.taxon:31a9b8b8-4e8f-4343-a15f-2ed24e0bf1ae&quot;}]
+          </pre>
+        </div>
+        <div class="col-sm-12">
+          <h3>New result</h3>
+          <pre>
+            [{&quot;scientificName&quot;:&quot;ANIMALIA&quot;,&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:afd.taxon:4647863b-760d-4b59-aaa1-502c8cdf8d3c&quot;,&quot;rank&quot;:&quot;kingdom&quot;,&quot;rawRank&quot;:&quot;Kingdom&quot;},{&quot;scientificName&quot;:&quot;CHORDATA&quot;,&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:afd.taxon:065f1da4-53cd-40b8-a396-80fa5c74dedd&quot;,&quot;rank&quot;:&quot;phylum&quot;,&quot;rawRank&quot;:&quot;Phylum&quot;},{&quot;scientificName&quot;:&quot;VERTEBRATA&quot;,&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:afd.taxon:5d6076b1-b7c7-487f-9d61-0fea0111cc7e&quot;,&quot;rank&quot;:&quot;subphylum&quot;,&quot;rawRank&quot;:&quot;SubPhylum&quot;},{&quot;scientificName&quot;:&quot;GNATHOSTOMATA&quot;,&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:afd.taxon:ef5515fd-a0a2-4e16-b61a-0f19f8900f76&quot;,&quot;rank&quot;:&quot;suprageneric&quot;,&quot;rawRank&quot;:&quot;Higher Taxon&quot;},{&quot;scientificName&quot;:&quot;MAMMALIA&quot;,&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:afd.taxon:e9e7db31-04df-41fb-bd8d-e0b0f3c332d6&quot;,&quot;rank&quot;:&quot;class&quot;,&quot;rawRank&quot;:&quot;Class&quot;},{&quot;scientificName&quot;:&quot;MARSUPIALIA&quot;,&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:afd.taxon:602afec4-950f-4961-9ad0-74793be8efbf&quot;,&quot;rank&quot;:&quot;subclass&quot;,&quot;rawRank&quot;:&quot;SubClass&quot;},{&quot;scientificName&quot;:&quot;DIPROTODONTIA&quot;,&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:afd.taxon:6d8079f1-edc9-4aab-aabd-232a32b42471&quot;,&quot;rank&quot;:&quot;order&quot;,&quot;rawRank&quot;:&quot;Order&quot;},{&quot;scientificName&quot;:&quot;PHALANGERIDA&quot;,&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:afd.taxon:e6733776-808c-4aff-9758-e33223c5029f&quot;,&quot;rank&quot;:&quot;suborder&quot;,&quot;rawRank&quot;:&quot;SubOrder&quot;},{&quot;scientificName&quot;:&quot;MACROPODOIDEA&quot;,&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:afd.taxon:894143f7-f712-40e1-96f1-418c93755acc&quot;,&quot;rank&quot;:&quot;superfamily&quot;,&quot;rawRank&quot;:&quot;SuperFamily&quot;},{&quot;scientificName&quot;:&quot;MACROPODIDAE&quot;,&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:afd.taxon:72a1c39f-2435-4c28-a680-714b69ded6f9&quot;,&quot;rank&quot;:&quot;family&quot;,&quot;rawRank&quot;:&quot;Family&quot;},{&quot;scientificName&quot;:&quot;MACROPODINAE&quot;,&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:afd.taxon:b5affee1-2306-4626-8d36-cfe961547d87&quot;,&quot;rank&quot;:&quot;subfamily&quot;,&quot;rawRank&quot;:&quot;SubFamily&quot;},{&quot;scientificName&quot;:&quot;Macropus&quot;,&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:afd.taxon:9e6a0bba-de5b-4465-8544-aa8fe3943fab&quot;,&quot;rank&quot;:&quot;genus&quot;,&quot;rawRank&quot;:&quot;Genus&quot;},{&quot;scientificName&quot;:&quot;Macropus rufus&quot;,&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:afd.taxon:31a9b8b8-4e8f-4343-a15f-2ed24e0bf1ae&quot;,&quot;rank&quot;:&quot;species&quot;,&quot;rawRank&quot;:&quot;Species&quot;}]
+          </pre>
+        </div>
+      </div>
+
+      <hr>
+
+    </div> <!-- /container -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsondiffpatch/0.1.43/jsondiffpatch-full.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsondiffpatch/0.1.43/jsondiffpatch-formatters.min.js"></script>
+    <script type="text/javascript">
+      "use strict";
+      var left = [{"rank":"kingdom","rankID":1000,"scientificName":"ANIMALIA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:4647863b-760d-4b59-aaa1-502c8cdf8d3c"},{"rank":"phylum","rankID":2000,"scientificName":"CHORDATA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:065f1da4-53cd-40b8-a396-80fa5c74dedd"},{"rank":"subphylum","rankID":-1,"scientificName":"VERTEBRATA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:5d6076b1-b7c7-487f-9d61-0fea0111cc7e"},{"rank":"higher taxon","rankID":0,"scientificName":"GNATHOSTOMATA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:ef5515fd-a0a2-4e16-b61a-0f19f8900f76"},{"rank":"class","rankID":3000,"scientificName":"MAMMALIA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:e9e7db31-04df-41fb-bd8d-e0b0f3c332d6"},{"rank":"subclass","rankID":3200,"scientificName":"MARSUPIALIA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:602afec4-950f-4961-9ad0-74793be8efbf"},{"rank":"order","rankID":4000,"scientificName":"DIPROTODONTIA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:bd223248-af12-4ce9-9380-4f9a85be38db"},{"rank":"suborder","rankID":4200,"scientificName":"PHALANGERIDA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:e6733776-808c-4aff-9758-e33223c5029f"},{"rank":"superfamily","rankID":4500,"scientificName":"MACROPODOIDEA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:894143f7-f712-40e1-96f1-418c93755acc"},{"rank":"family","rankID":5000,"scientificName":"MACROPODIDAE","guid":"urn:lsid:biodiversity.org.au:afd.taxon:72e28d9f-375f-4728-bd99-d2b2a5d1f1f2"},{"rank":"subfamily","rankID":5500,"scientificName":"MACROPODINAE","guid":"urn:lsid:biodiversity.org.au:afd.taxon:b5affee1-2306-4626-8d36-cfe961547d87"},{"rank":"genus","rankID":6000,"scientificName":"Macropus","guid":"urn:lsid:biodiversity.org.au:afd.taxon:9e6a0bba-de5b-4465-8544-aa8fe3943fab"},{"rank":"species","rankID":7000,"scientificName":"Macropus rufus","guid":"urn:lsid:biodiversity.org.au:afd.taxon:31a9b8b8-4e8f-4343-a15f-2ed24e0bf1ae"}];
+      var right = [{"scientificName":"ANIMALIA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:4647863b-760d-4b59-aaa1-502c8cdf8d3c","rank":"kingdom","rawRank":"Kingdom"},{"scientificName":"CHORDATA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:065f1da4-53cd-40b8-a396-80fa5c74dedd","rank":"phylum","rawRank":"Phylum"},{"scientificName":"VERTEBRATA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:5d6076b1-b7c7-487f-9d61-0fea0111cc7e","rank":"subphylum","rawRank":"SubPhylum"},{"scientificName":"GNATHOSTOMATA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:ef5515fd-a0a2-4e16-b61a-0f19f8900f76","rank":"suprageneric","rawRank":"Higher Taxon"},{"scientificName":"MAMMALIA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:e9e7db31-04df-41fb-bd8d-e0b0f3c332d6","rank":"class","rawRank":"Class"},{"scientificName":"MARSUPIALIA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:602afec4-950f-4961-9ad0-74793be8efbf","rank":"subclass","rawRank":"SubClass"},{"scientificName":"DIPROTODONTIA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:6d8079f1-edc9-4aab-aabd-232a32b42471","rank":"order","rawRank":"Order"},{"scientificName":"PHALANGERIDA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:e6733776-808c-4aff-9758-e33223c5029f","rank":"suborder","rawRank":"SubOrder"},{"scientificName":"MACROPODOIDEA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:894143f7-f712-40e1-96f1-418c93755acc","rank":"superfamily","rawRank":"SuperFamily"},{"scientificName":"MACROPODIDAE","guid":"urn:lsid:biodiversity.org.au:afd.taxon:72a1c39f-2435-4c28-a680-714b69ded6f9","rank":"family","rawRank":"Family"},{"scientificName":"MACROPODINAE","guid":"urn:lsid:biodiversity.org.au:afd.taxon:b5affee1-2306-4626-8d36-cfe961547d87","rank":"subfamily","rawRank":"SubFamily"},{"scientificName":"Macropus","guid":"urn:lsid:biodiversity.org.au:afd.taxon:9e6a0bba-de5b-4465-8544-aa8fe3943fab","rank":"genus","rawRank":"Genus"},{"scientificName":"Macropus rufus","guid":"urn:lsid:biodiversity.org.au:afd.taxon:31a9b8b8-4e8f-4343-a15f-2ed24e0bf1ae","rank":"species","rawRank":"Species"}];
+      var instance = jsondiffpatch.create({
+        objectHash: function(obj, index) {
+          if (typeof obj.guid !== 'undefined') {
+            return obj.guid;
+          }
+          if (typeof obj._id !== 'undefined') {
+            return obj._id;
+          }
+          if (typeof obj.id !== 'undefined') {
+            return obj.id;
+          }
+          if (typeof obj.name !== 'undefined') {
+            return obj.name;
+          }
+          return '$$index:' + index;
+        }
+      });
+      var delta = instance.diff(left, right);
+      // beautiful html diff
+      document.getElementById('visual').innerHTML = jsondiffpatch.formatters.html.format(delta, left);
+      // self-explained json
+      // document.getElementById('annotated').innerHTML = jsondiffpatch.formatters.annotated.format(delta, left);
+    </script>
+    </body>
+</html>

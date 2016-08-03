@@ -1,0 +1,114 @@
+taxonID,taxonRank,scientificName,establishmentMeans,genus,family,order,class,phylum,kingdom,datasetName
+NZOR-3-56928,species,Peziza macropus,,,,,,,,New Zealand Organism Register
+NZOR-3-86067,species,Macroscyphus macropus,,,,,,,,New Zealand Organism Register
+CoL:10149127,species,Corynophrya macropus,,Corynophrya,Corynophryidae,,,,,Catalogue of Life
+NZOR-3-22479,species,Epilobium macropus,native,,,,,,,New Zealand Organism Register
+http://id.biodiversity.org.au/name/apni/85990,subspecies,Dendrobium macropus subsp. macropus,,,,,,,Plantae,Australian Plant Name Index
+NZOR-3-65145,species,Helvella macropus,,,,,,,,New Zealand Organism Register
+CoL:25601992,species,Cribraria tenella var. macropus,,,,,,,,Catalogue of Life
+http://collections.ala.org.au/public/show/dr4985,,,,,,,,,,
+http://collections.ala.org.au/public/show/dr4986,,,,,,,,,,
+http://collections.ala.org.au/public/show/dr2653,,,,,,,,,,
+urn:lsid:biodiversity.org.au:afd.name:319458,species,Testudo macropus,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:371758,species,Trombicula macropus,,,,,,,,Australian Faunal Directory
+http://id.biodiversity.org.au/name/apni/85985,subspecies,Dendrobium macropus subsp. gracilicaule,,,,,,,Plantae,Australian Plant Name Index
+NZOR-3-78803,species,Ranunculus macropus,native,,,,,,,New Zealand Organism Register
+urn:lsid:biodiversity.org.au:afd.name:315739,,Octopus macropus,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:460291,subspecies,Macropus (Petrogale) brachyotis,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:339350,genus,Caristius macropus,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:315739,family,Octopus macropus,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:390073,species,Vespertilio macropus,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:450925,species,Macropus (Halmaturus) parma,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:450926,species,Macropus (Halmaturus) parma,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:393372,species,Chaetopterus macropus,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:464397,species,Chaetopterus variopedatus macropus,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:339350,species,Caristius macropus,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:464219,subspecies,Amphibolurus caudicinctus macropus,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:314437,subspecies,Macropus elegans,,,,,,,,Australian Faunal Directory
+http://id.biodiversity.org.au/name/apni/85984,species,Dendrobium macropus,,,,,,,Plantae,Australian Plant Name Index
+http://id.biodiversity.org.au/name/apni/85989,subspecies,Dendrobium macropus subsp. howeanum,,,,,,,Plantae,Australian Plant Name Index
+http://id.biodiversity.org.au/name/apni/96582,species,Thelychiton macropus,,,,,,,Plantae,Australian Plant Name Index
+http://id.biodiversity.org.au/instance/apni/857941,species,Marsilea macropus,,,,,,,,Australian Plant Census
+urn:lsid:biodiversity.org.au:afd.name:346057,species,Macropus ualabatus,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:314440,species,Macropus welsbyi,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:292117,subspecies,Macropus minor,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:276067,subspecies,Mus macropus,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:419555,subspecies,Uromys macropus exilis,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:451250,species,Notomys mitchellii macropus,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:346055,species,Macropus leporides,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:442048,subspecies,Macropus agilis aurescens,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:329131,subspecies,Macropus melanops,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:292116,species,Macropus major,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:460292,species,Macropus giganteus tasmaniensis,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:450923,species,Macropus (Halmaturus) greyi,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:460290,species,Macropus (Halmaturus) manicatus,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:364203,subspecies,Macropus erubescens,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:447108,subspecies,Macropus robustus cervinus,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:456318,subspecies,Macropus robustus alligatoris,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:302266,subspecies,Macropus magnus,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:364202,subspecies,Macropus argentatus,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:364204,subspecies,Macropus hagenbecki,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:434973,subspecies,Macropus robustus rubens,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:456317,subspecies,Macropus robustus alexandriae,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:456315,subspecies,Macropus (Petrogale) robustus,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:442049,subspecies,Macropus robustus reginae,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:453917,subspecies,Macropus robustus bracteator,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:329129,subspecies,Macropus bennetti,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:458477,subspecies,Macropus (Halmaturus) fruticus,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:346054,species,Macropus lanigerus,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:453915,species,Macropus (Osphranter) pictus,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:292119,species,Macropus ruber,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:450922,species,Macropus (Boriogale) magnus,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:450930,species,Macropus rufus dissimulatus,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:450931,species,Macropus rufus occidentalis,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:450929,species,Macropus rufus dissimulator,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:425607,species,Macropus rufus pallidus,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:346052,species,Macropus fraenatus,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:314439,species,Macropus lunatus,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:329134,subspecies,Macropus unguifer,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:461993,species,Macropus (Halmaturus) rufiventer,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.name:290484,subspecies,Falco macropus,,,,,,,,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:7fcf6183-32f8-4203-8ebb-744826a2472e,species,Latumcephalum macropus,,Latumcephalum,BOOPIIDAE,PSOCODEA,INSECTA,ARTHROPODA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:7f839513-797d-4348-96cc-020680d61419,species,Petrogalochirus macropus,,Petrogalochirus,ATOPOMELIDAE,SARCOPTIFORMES,ARACHNIDA,ARTHROPODA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:2bbc4c67-9658-49f6-b77e-343ae1d026e1,species,Heterodoxus macropus,,Heterodoxus,BOOPIIDAE,PSOCODEA,INSECTA,ARTHROPODA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:b4619ca1-6e72-4c4c-90aa-9fa2fccfeffe,species,Cytostethum macropus,,Cytostethum,ATOPOMELIDAE,SARCOPTIFORMES,ARACHNIDA,ARTHROPODA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:51ac74ee-fa25-48dd-8c96-2c268f2e3324,species,Prosena macropus,,Prosena,TACHINIDAE,DIPTERA,INSECTA,ARTHROPODA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:57522529-4e36-4f57-a626-47eeccba3b76,species,Austropyrgus macropus,,Austropyrgus,HYDROBIIDAE,HYPSOGASTROPODA,GASTROPODA,MOLLUSCA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:575f92ea-f72d-424b-8f4b-4d12359188d7,subspecies,Macropus eugenii eugenii,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:ff0a0d19-8d0e-4067-b210-4d0b3f7d9ba9,subspecies,Macropus fuliginosus fuliginosus,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:0bf79753-c526-42bb-a43d-d5f5f97f2f90,subspecies,Macropus agilis agilis,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:233a86ef-852a-4503-9aae-1f03a2f833db,species,Mexichromis macropus,,Mexichromis,CHROMODORIDIDAE,NUDIBRANCHIA,GASTROPODA,MOLLUSCA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:cd2f60f5-cb6d-48f6-bc06-0dc796bd6c7f,subspecies,Macropus agilis jardinii,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:fe69ffcc-a108-4675-a25c-f4428203e4de,species,Macropus irma,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:dc05eac3-96ff-4f94-b0bd-f090f264718b,species,Macropus parryi,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:f5c920a3-cc1a-4ac9-9a34-19c6cc6a833e,subspecies,Ctenophorus caudicinctus macropus,,Ctenophorus,AGAMIDAE,SQUAMATA,REPTILIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:96c485c1-bc43-40be-a0c2-e331fe5ed839,species,Thalamita macropus,,Thalamita,PORTUNIDAE,DECAPODA,MALACOSTRACA,ARTHROPODA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:352dd6e7-86e1-4745-86fb-7871993bdb17,subspecies,Macropus robustus woodwardi,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:9e6a0bba-de5b-4465-8544-aa8fe3943fab,genus,Macropus,,,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:7dfe05e9-14dd-4fce-ae25-0dc5a772998a,subspecies,Macropus fuliginosus melanops,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:6e8e49d5-da08-4567-9b18-429bd6a53237,species,Macropus fuliginosus,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:9d5d9e5b-4374-4129-aa9a-ff7921f3b1c9,species,Macropus robustus,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:a3f66cb6-fd75-4e24-b104-9e3f09c52356,subspecies,Macropus eugenii decres,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:53026a84-c638-4ea7-a498-dcbf611f3173,species,Macropus eugenii,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:e6799339-3a4b-4a34-9002-19bde21d06f0,subspecies,Macropus eugenii derbianus,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:243fdcaa-a28b-476f-bd47-6c755b911d0f,species,Polyrhachis macropus,,Polyrhachis,FORMICIDAE,HYMENOPTERA,INSECTA,ARTHROPODA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:0a2ec68b-05d8-4b40-8536-0bf9f9bd6bf2,species,Eutrombicula macropus,,Eutrombicula,TROMBICULIDAE,TROMBIDIFORMES,ARACHNIDA,ARTHROPODA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:536b01fc-16a3-408a-b47d-53613ca65b77,subspecies,Falco (Hierofalco) peregrinus macropus,,Falco,FALCONIDAE,FALCONIFORMES,AVES,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:ec13cfac-4783-46c2-9ad3-50e2c60f1348,species,Macropus bernardus,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:837ae3f6-8e54-4ded-a0fd-679145dc7887,subspecies,Macropus agilis nigrescens,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:77528beb-f667-4c1e-9845-c5822109d60b,species,Acanthomunna macropus,,Acanthomunna,DENDROTIIDAE,ISOPODA,MALACOSTRACA,ARTHROPODA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:d469add5-f4f6-4271-a48f-f67cca445a07,species,Macropus antilopinus,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:0f2116b0-07d7-4788-9c93-d482530af868,subspecies,Macropus rufogriseus banksianus,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:50cae89d-9af7-4901-883d-7db6c5cc3116,species,Macropus agilis,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:baa8c519-fa4f-47e3-ade0-ff6b67a1f9ce,subspecies,Macropus rufogriseus rufogriseus,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:ea9493e5-3386-413e-9844-f213ddc96938,subspecies,Macropus robustus isabellinus,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:c42a3e19-eeff-4282-8366-ab3ee2f4f73c,species,Macropus greyi,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:4873ea38-7e84-473d-a4f1-c7a47257f6d4,species,Calostaurus macropus,,Calostaurus,DAVAINEIDAE,CYCLOPHYLLIDEA,CESTODA,PLATYHELMINTHES,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:76013020-e8ee-4143-9d79-d44cd48ab4f3,subspecies,Macropus robustus erubescens,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:dd61423a-f07f-4517-93c9-28b2d5369c30,species,Macropus parma,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:2da83de9-a0e2-486f-b228-4e40a606bcf4,subspecies,Macropus robustus robustus,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:43639327-3bc9-43ae-861b-e0f982b1a8b2,species,Macropus giganteus,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:102c2bde-cebf-4de7-9cfd-79c68a0b54bb,species,Macropus rufogriseus,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:31a9b8b8-4e8f-4343-a15f-2ed24e0bf1ae,species,Macropus rufus,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:df5d47f0-2353-4c8f-aacf-f134b16f261d,species,Myotis macropus,,Myotis,VESPERTILIONIDAE,CHIROPTERA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory
+urn:lsid:biodiversity.org.au:afd.taxon:4df3511b-0bd0-4e57-83e0-4a267b5a6306,species,Macropus dorsalis,,Macropus,MACROPODIDAE,DIPROTODONTIA,MAMMALIA,CHORDATA,ANIMALIA,Australian Faunal Directory

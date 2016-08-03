@@ -1,0 +1,98 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://www.ala.org.au/commonui-bs3/css/ala-styles.css"> -->
+        <link rel="stylesheet" href="https://cdn.rawgit.com/benjamine/jsondiffpatch/master/public/formatters-styles/html.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/benjamine/jsondiffpatch/master/public/formatters-styles/annotated.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    </head>
+    <body>
+    <div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="page-header">
+        <h1>species/lookup/bulk</h1>
+      </div>
+      <h2>POST body</h2>
+      <pre>
+        {&quot;names&quot;:[&quot;Grevillea&quot;],&quot;vernacular&quot;:true}
+      </pre>
+    </div>
+  </div>
+</div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">JSON Diff</h3>
+            </div>
+            <div class="panel-body">
+              <div id="visual">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <h3>Old result</h3>
+          <pre>
+            [{&quot;acceptedConceptGuid&quot;:null,&quot;acceptedConceptName&quot;:null,&quot;author&quot;:&quot;Meisn.&quot;,&quot;classs&quot;:&quot;Equisetopsida&quot;,&quot;commonName&quot;:&quot;Poker Grevillea&quot;,&quot;conservationStatus&quot;:{},&quot;family&quot;:&quot;Proteaceae&quot;,&quot;genus&quot;:&quot;Grevillea&quot;,&quot;guid&quot;:&quot;http://id.biodiversity.org.au/node/apni/2918016&quot;,&quot;highlight&quot;:null,&quot;idxType&quot;:&quot;TAXON&quot;,&quot;image&quot;:&quot;60f49ea3-4b48-4893-b8d7-1817d93047a7&quot;,&quot;imageMetadataUrl&quot;:&quot;dc&quot;,&quot;imageUrl&quot;:null,&quot;kingdom&quot;:&quot;Plantae&quot;,&quot;largeImageUrl&quot;:&quot;60f49ea3-4b48-4893-b8d7-1817d93047a7&quot;,&quot;linkIdentifier&quot;:null,&quot;name&quot;:&quot;Grevillea petrophiloides&quot;,&quot;nameComplete&quot;:&quot;Grevillea petrophiloides Meisn.&quot;,&quot;order&quot;:&quot;Proteales&quot;,&quot;parentGuid&quot;:&quot;http://id.biodiversity.org.au/node/apni/3855393&quot;,&quot;phylum&quot;:&quot;Charophyta&quot;,&quot;rank&quot;:&quot;species&quot;,&quot;rankId&quot;:7000,&quot;score&quot;:2.9588866,&quot;smallImageUrl&quot;:&quot;60f49ea3-4b48-4893-b8d7-1817d93047a7&quot;,&quot;taxonomicStatus&quot;:&quot;accepted&quot;,&quot;thumbnailUrl&quot;:&quot;60f49ea3-4b48-4893-b8d7-1817d93047a7&quot;}]
+          </pre>
+        </div>
+        <div class="col-sm-12">
+          <h3>New result</h3>
+          <pre>
+            [{&quot;guid&quot;:&quot;urn:lsid:biodiversity.org.au:apni.taxon:292357&quot;,&quot;name&quot;:&quot;Grevillea banksii&quot;,&quot;idxType&quot;:&quot;TAXON&quot;,&quot;score&quot;:3.5858604E10,&quot;parentGuid&quot;:&quot;urn:lsid:biodiversity.org.au:apni.taxon:378603&quot;,&quot;commonName&quot;:&quot;Banks Grevillea, Banks&#39; Grevillea, Byfield Waratah, Dwarf Silky Oak, Forsters Grevillea, Red Flowered Silky Oak, Red Silky Oak, Red-flowered Silky Oak&quot;,&quot;nameComplete&quot;:&quot;Grevillea banksii&quot;,&quot;commonNameSingle&quot;:&quot;Banks Grevillea&quot;,&quot;hasChildren&quot;:false,&quot;rank&quot;:&quot;species&quot;,&quot;rankId&quot;:7000,&quot;rawRank&quot;:&quot;Species&quot;,&quot;isAustralian&quot;:&quot;recorded&quot;,&quot;highlight&quot;:&quot;Banks &lt;strong&gt;Grevillea&lt;/strong&gt; &lt;strong&gt;Grevillea&lt;/strong&gt;&quot;,&quot;image&quot;:&quot;http://bie.ala.org.au/repo/1051/191/1914370/raw.jpg&quot;,&quot;thumbnail&quot;:&quot;http://bie.ala.org.au/repo/1051/191/1914370/thumbnail.jpg&quot;,&quot;left&quot;:283131,&quot;right&quot;:283132,&quot;kingdom&quot;:&quot;Plantae&quot;,&quot;phylum&quot;:&quot;Charophyta&quot;,&quot;classs&quot;:&quot;Equisetopsida&quot;,&quot;order&quot;:&quot;Proteales&quot;,&quot;family&quot;:&quot;Proteaceae&quot;,&quot;genus&quot;:&quot;Grevillea&quot;,&quot;author&quot;:&quot;R.Br.&quot;,&quot;linkIdentifier&quot;:&quot;Grevillea+banksii&quot;,&quot;imageSource&quot;:&quot;dr430&quot;,&quot;imageCount&quot;:29,&quot;isExcluded&quot;:false,&quot;largeImageUrl&quot;:&quot;http://bie.ala.org.au/repo/1051/191/1914370/largeRaw.jpg&quot;,&quot;smallImageUrl&quot;:&quot;http://bie.ala.org.au/repo/1051/191/1914370/smallRaw.jpg&quot;,&quot;thumbnailUrl&quot;:&quot;http://bie.ala.org.au/repo/1051/191/1914370/thumbnail.jpg&quot;,&quot;imageMetadataUrl&quot;:&quot;http://bie.ala.org.au/repo/1051/191/1914370/dc&quot;}]
+          </pre>
+        </div>
+      </div>
+
+      <hr>
+
+    </div> <!-- /container -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsondiffpatch/0.1.43/jsondiffpatch-full.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsondiffpatch/0.1.43/jsondiffpatch-formatters.min.js"></script>
+    <script type="text/javascript">
+      "use strict";
+      var left = [{"acceptedConceptGuid":null,"acceptedConceptName":null,"author":"Meisn.","classs":"Equisetopsida","commonName":"Poker Grevillea","conservationStatus":{},"family":"Proteaceae","genus":"Grevillea","guid":"http://id.biodiversity.org.au/node/apni/2918016","highlight":null,"idxType":"TAXON","image":"60f49ea3-4b48-4893-b8d7-1817d93047a7","imageMetadataUrl":"dc","imageUrl":null,"kingdom":"Plantae","largeImageUrl":"60f49ea3-4b48-4893-b8d7-1817d93047a7","linkIdentifier":null,"name":"Grevillea petrophiloides","nameComplete":"Grevillea petrophiloides Meisn.","order":"Proteales","parentGuid":"http://id.biodiversity.org.au/node/apni/3855393","phylum":"Charophyta","rank":"species","rankId":7000,"score":2.9588866,"smallImageUrl":"60f49ea3-4b48-4893-b8d7-1817d93047a7","taxonomicStatus":"accepted","thumbnailUrl":"60f49ea3-4b48-4893-b8d7-1817d93047a7"}];
+      var right = [{"guid":"urn:lsid:biodiversity.org.au:apni.taxon:292357","name":"Grevillea banksii","idxType":"TAXON","score":3.5858604E10,"parentGuid":"urn:lsid:biodiversity.org.au:apni.taxon:378603","commonName":"Banks Grevillea, Banks' Grevillea, Byfield Waratah, Dwarf Silky Oak, Forsters Grevillea, Red Flowered Silky Oak, Red Silky Oak, Red-flowered Silky Oak","nameComplete":"Grevillea banksii","commonNameSingle":"Banks Grevillea","hasChildren":false,"rank":"species","rankId":7000,"rawRank":"Species","isAustralian":"recorded","highlight":"Banks <strong>Grevillea</strong> <strong>Grevillea</strong>","image":"http://bie.ala.org.au/repo/1051/191/1914370/raw.jpg","thumbnail":"http://bie.ala.org.au/repo/1051/191/1914370/thumbnail.jpg","left":283131,"right":283132,"kingdom":"Plantae","phylum":"Charophyta","classs":"Equisetopsida","order":"Proteales","family":"Proteaceae","genus":"Grevillea","author":"R.Br.","linkIdentifier":"Grevillea+banksii","imageSource":"dr430","imageCount":29,"isExcluded":false,"largeImageUrl":"http://bie.ala.org.au/repo/1051/191/1914370/largeRaw.jpg","smallImageUrl":"http://bie.ala.org.au/repo/1051/191/1914370/smallRaw.jpg","thumbnailUrl":"http://bie.ala.org.au/repo/1051/191/1914370/thumbnail.jpg","imageMetadataUrl":"http://bie.ala.org.au/repo/1051/191/1914370/dc"}];
+      var instance = jsondiffpatch.create({
+        objectHash: function(obj, index) {
+          if (typeof obj.guid !== 'undefined') {
+            return obj.guid;
+          }
+          if (typeof obj._id !== 'undefined') {
+            return obj._id;
+          }
+          if (typeof obj.id !== 'undefined') {
+            return obj.id;
+          }
+          if (typeof obj.name !== 'undefined') {
+            return obj.name;
+          }
+          return '$$index:' + index;
+        }
+      });
+      var delta = instance.diff(left, right);
+      // beautiful html diff
+      document.getElementById('visual').innerHTML = jsondiffpatch.formatters.html.format(delta, left);
+      // self-explained json
+      // document.getElementById('annotated').innerHTML = jsondiffpatch.formatters.annotated.format(delta, left);
+    </script>
+    </body>
+</html>

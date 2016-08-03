@@ -1,0 +1,12 @@
+[
+  { "name": "search", "uri": "search.json?q=Macropus", "content": "application/json", "notes": "# Test note" }
+  ,{"name": "search-genus", "uri": "search.json?q=genus%3AMacropus", "content": "application/json" }
+  ,{"name": "species-guid", "uri": "species/urn:lsid:biodiversity.org.au:afd.taxon:aa745ff0-c776-4d0e-851d-369ba0e6f537.json", "content": "application/json" }
+  ,{"name": "index-fields", "uri": "admin/indexFields", "content": "application/json" }
+  ,{"name": "species-bulk-lookup", "uri": "species/lookup/bulk", "post": "{\"names\":[\"Macropus rufus\",\"Macropus greyi\"]}", "content": "application/json" }
+  ,{"name": "species-vernacular-bulk-lookup", "uri": "species/lookup/bulk", "post": "{\"names\":[\"Grevillea\"],\"vernacular\":true}", "content": "application/json" }
+  ,{"name": "download", "uri": "download?q=Macropus", "content": "text/csv" }
+  ,{"name": "download-genus", "uri": "download?q=genus%3AMacropus", "content": "text/csv" }
+  ,{"name": "guid-batch", "uri": "guid/batch.json?q=macropus&q=pogona", "content": "application/json" }
+  ,{"name": "classification", "uri": "classification/urn:lsid:biodiversity.org.au:afd.taxon:31a9b8b8-4e8f-4343-a15f-2ed24e0bf1ae", "content": "application/json" }
+]
