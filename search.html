@@ -28,7 +28,17 @@
           <h3 class="panel-title">Change notes</h3>
         </div>
         <div class="panel-body">
-          <h1>Test note</h1>
+          <ul>
+<li><code>facetResults</code> are now returned along with the results</li>
+<li><code>queryTitle</code> is removed</li>
+<li><code>query</code> is added and contains the full SOLR search query that was run</li>
+<li>Paging params <code>pageSize</code>, <code>sort</code>, <code>startIndex</code> are now reported in results</li>
+<li><code>class</code> was renamed to <code>classs</code> (by accident, presumably)</li>
+<li>a number of taxon hierarchy fields appear to have been removed (<code>subclass</code>, <code>subclassGuid</code>, etc)</li>
+<li><code>idxtype</code> has become <code>idxType</code></li>
+<li><code>highlight</code> now returns HTML5 &lt;strong&gt; tags instead of &lt;b&gt;</li>
+<li><code>occCount</code> and <code>imageCount</code> added</li>
+</ul>
 
         </div>
       </div>

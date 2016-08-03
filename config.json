@@ -1,5 +1,5 @@
 [
-  { "name": "search", "uri": "search.json?q=Macropus", "content": "application/json", "notes": "# Test note" }
+  { "name": "search", "uri": "search.json?q=Macropus", "content": "application/json" }
   ,{"name": "search-genus", "uri": "search.json?q=genus%3AMacropus", "content": "application/json" }
   ,{"name": "species-guid", "uri": "species/urn:lsid:biodiversity.org.au:afd.taxon:aa745ff0-c776-4d0e-851d-369ba0e6f537.json", "content": "application/json" }
   ,{"name": "index-fields", "uri": "admin/indexFields", "content": "application/json" }
