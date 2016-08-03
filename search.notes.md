@@ -1,9 +1,10 @@
- * `facetResults` are now returned along with the results
- * `queryTitle` is removed
- * `query` is added and contains the full SOLR search query that was run
- * Paging params `pageSize`, `sort`, `startIndex` are now reported in results
- * `class` was renamed to `classs` (by accident, presumably)
- * a number of taxon hierarchy fields appear to have been removed (`subclass`, `subclassGuid`, etc)
- * `idxtype` has become `idxType`
- * `highlight` now returns HTML5 &lt;strong&gt; tags instead of &lt;b&gt;
- * `occCount` and `imageCount` added
+ * `facetResults` are no longer returned along with the results (by default?)
+ * `queryTitle` is added
+ * `query`, which contained the full SOLR query, is removed
+ * Paging params `pageSize`, `sort`, `startIndex` are no longer reported in results
+ * Results:
+   * `classs` was renamed to `class`
+   * a number of taxon hierarchy fields have been added (`subclass`, `subclassGuid`, etc)
+   * `idxType` has become `idxtype`
+   * `highlight` now returns &lt;b&gt; tags instead of &lt;strong&gt; and uses `nameComplete` instead of `name`
+   * `occCount` and `imageCount` removed

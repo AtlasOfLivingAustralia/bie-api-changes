@@ -1,1 +1,1 @@
-`rankId` has been removed and `rawRank` is now provided.
+`rankId` has been added and `rawRank` is no longer provided.

@@ -99,15 +99,19 @@
       <div class="row">
         <div class="col-sm-12">
           <ul>
-<li><code>facetResults</code> are now returned along with the results</li>
-<li><code>queryTitle</code> is removed</li>
-<li><code>query</code> is added and contains the full SOLR search query that was run</li>
-<li>Paging params <code>pageSize</code>, <code>sort</code>, <code>startIndex</code> are now reported in results</li>
-<li><code>class</code> was renamed to <code>classs</code> (by accident, presumably)</li>
-<li>a number of taxon hierarchy fields appear to have been removed (<code>subclass</code>, <code>subclassGuid</code>, etc)</li>
-<li><code>idxtype</code> has become <code>idxType</code></li>
-<li><code>highlight</code> now returns HTML5 &lt;strong&gt; tags instead of &lt;b&gt;</li>
-<li><code>occCount</code> and <code>imageCount</code> added</li>
+<li><code>facetResults</code> are no longer returned along with the results (by default?)</li>
+<li><code>queryTitle</code> is added</li>
+<li><code>query</code>, which contained the full SOLR query, is removed</li>
+<li>Paging params <code>pageSize</code>, <code>sort</code>, <code>startIndex</code> are no longer reported in results</li>
+<li>Results:
+<ul>
+<li><code>classs</code> was renamed to <code>class</code></li>
+<li>a number of taxon hierarchy fields have been added (<code>subclass</code>, <code>subclassGuid</code>, etc)</li>
+<li><code>idxType</code> has become <code>idxtype</code></li>
+<li><code>highlight</code> now returns &lt;b&gt; tags instead of &lt;strong&gt; and uses <code>nameComplete</code> instead of <code>name</code></li>
+<li><code>occCount</code> and <code>imageCount</code> removed</li>
+</ul>
+</li>
 </ul>
 
         </div>
