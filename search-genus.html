@@ -51,13 +51,13 @@
         <div class="col-sm-12">
           <h3>Old result</h3>
           <pre>
-            {&quot;searchResults&quot;:{&quot;totalRecords&quot;:0,&quot;facetResults&quot;:[],&quot;results&quot;:[],&quot;queryTitle&quot;:&quot;genus:Macropus&quot;}}
+            {&quot;searchResults&quot;:{&quot;pageSize&quot;:10,&quot;startIndex&quot;:0,&quot;totalRecords&quot;:0,&quot;sort&quot;:&quot;score&quot;,&quot;dir&quot;:&quot;desc&quot;,&quot;status&quot;:&quot;OK&quot;,&quot;facetResults&quot;:[],&quot;query&quot;:&quot; (commonName:genus\\:macropus) OR  text:genus\\:macropus OR  (scientificNameText:genus\\:macropus) OR  (name_complete:genus\\:macropus) OR  concat_name:\&quot;genusmacropus\&quot; OR  (stopped_common_name:genus\\:macropus) OR  exact_text:\&quot;genus\\:macropus\&quot;^100000000000&quot;,&quot;results&quot;:[]}}
           </pre>
         </div>
         <div class="col-sm-12">
           <h3>New result</h3>
           <pre>
-            {&quot;searchResults&quot;:{&quot;pageSize&quot;:10,&quot;startIndex&quot;:0,&quot;totalRecords&quot;:0,&quot;sort&quot;:&quot;score&quot;,&quot;dir&quot;:&quot;desc&quot;,&quot;status&quot;:&quot;OK&quot;,&quot;facetResults&quot;:[],&quot;query&quot;:&quot; (commonName:genus\\:macropus) OR  text:genus\\:macropus OR  (scientificNameText:genus\\:macropus) OR  (name_complete:genus\\:macropus) OR  concat_name:\&quot;genusmacropus\&quot; OR  (stopped_common_name:genus\\:macropus) OR  exact_text:\&quot;genus\\:macropus\&quot;^100000000000&quot;,&quot;results&quot;:[]}}
+            {&quot;searchResults&quot;:{&quot;totalRecords&quot;:0,&quot;facetResults&quot;:[],&quot;results&quot;:[],&quot;queryTitle&quot;:&quot;genus:Macropus&quot;}}
           </pre>
         </div>
       </div>
@@ -74,8 +74,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsondiffpatch/0.1.43/jsondiffpatch-formatters.min.js"></script>
     <script type="text/javascript">
       "use strict";
-      var left = {"searchResults":{"totalRecords":0,"facetResults":[],"results":[],"queryTitle":"genus:Macropus"}};
-      var right = {"searchResults":{"pageSize":10,"startIndex":0,"totalRecords":0,"sort":"score","dir":"desc","status":"OK","facetResults":[],"query":" (commonName:genus\\:macropus) OR  text:genus\\:macropus OR  (scientificNameText:genus\\:macropus) OR  (name_complete:genus\\:macropus) OR  concat_name:\"genusmacropus\" OR  (stopped_common_name:genus\\:macropus) OR  exact_text:\"genus\\:macropus\"^100000000000","results":[]}};
+      var left = {"searchResults":{"pageSize":10,"startIndex":0,"totalRecords":0,"sort":"score","dir":"desc","status":"OK","facetResults":[],"query":" (commonName:genus\\:macropus) OR  text:genus\\:macropus OR  (scientificNameText:genus\\:macropus) OR  (name_complete:genus\\:macropus) OR  concat_name:\"genusmacropus\" OR  (stopped_common_name:genus\\:macropus) OR  exact_text:\"genus\\:macropus\"^100000000000","results":[]}};
+      var right = {"searchResults":{"totalRecords":0,"facetResults":[],"results":[],"queryTitle":"genus:Macropus"}};
       var instance = jsondiffpatch.create({
         objectHash: function(obj, index) {
           if (typeof obj.guid !== 'undefined') {

@@ -85,15 +85,15 @@ class Runner {
    */
   static void generateDocs(boolean skip, uris) {
 
-    def oldBase = 'http://bie.ala.org.au/ws'
-    def newBase = 'http://bie-imt.ala.org.au/ws'
+    def oldBase = 'http://bie-imt.ala.org.au/ws'
+    def newBase = 'http://bie.ala.org.au/ws'
 
     log.info("Calling services...")
 
     def results = uris.collect {
       final uri = it.uri
-      final oldUrl = "$oldBase/$it.uri".toURL()
-      final newUrl = "$newBase/$it.uri".toURL()
+      final oldUrl = "$oldBase/${it.uri}".toURL()
+      final newUrl = "$newBase/${it.uri}".toURL()
       final extension = contentTypeExtension(it.content)
       final newName = "${it.name}.new.$extension"
       final oldName = "${it.name}.old.$extension"

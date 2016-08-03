@@ -1,1 +1,1 @@
-{"searchResults":{"totalRecords":0,"facetResults":[],"results":[],"queryTitle":"genus:Macropus"}}
+{"searchResults":{"pageSize":10,"startIndex":0,"totalRecords":0,"sort":"score","dir":"desc","status":"OK","facetResults":[],"query":" (commonName:genus\\:macropus) OR  text:genus\\:macropus OR  (scientificNameText:genus\\:macropus) OR  (name_complete:genus\\:macropus) OR  concat_name:\"genusmacropus\" OR  (stopped_common_name:genus\\:macropus) OR  exact_text:\"genus\\:macropus\"^100000000000","results":[]}}
