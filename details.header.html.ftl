@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-sm-12">
       <div class="page-header">
-        <h1>${uri?html}</h1>
+        <h1>${title?html}<br/><small>${uri?html}</small></h1>
       </div>
       <#if post??>
       <h2>POST body</h2>

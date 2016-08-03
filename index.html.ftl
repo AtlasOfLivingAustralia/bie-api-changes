@@ -25,7 +25,7 @@
           <h1>BIE API changes</h1>
           <table class="table table-striped">
             <tr>
-              <th>URL</th>
+              <th>Title</th>
               <th>Previous</th>
               <th>Current</th>
               <th>Details</th>
@@ -34,13 +34,13 @@
           <#list items as item>
             <#if item.error>
             <tr class="danger">
-              <td>${item.uri}</td>
+              <td>${item.title}<br/><small>${item.uri}</small></td>
               <td colspan="3">Error during processing</td>
               <td><#if item.markedNotes?has_content><a href="${item.name}.notes.html">Change notes</a></#if></td>
             </tr>
             <#else>
             <tr>
-              <td>${item.uri}</td>
+              <td>${item.title}<br/><small>${item.uri}</small></td>
               <td><a href="${item.oldName}">${item.oldName}</a></td>
               <td><a href="${item.newName}">${item.newName}</a></td>
               <td><a href="${item.reportName}">Change details</a></td>

@@ -44,7 +44,7 @@ class Runner {
 
     def argsSet = args.toList()
     def watch = argsSet.contains('--watch')
-    def skip = argsSet.contains('--skip') || watch
+    def skip = argsSet.contains('--skip')
 
     initFreemarker()
     generateDocs(skip, uris)
@@ -69,7 +69,7 @@ class Runner {
                           .subscribe({ e ->
                               log.info("File changed: ${e.path}")
                               cfg.clearTemplateCache()
-                              generateDocs(skip, json.parse(config, 'UTF-8'))
+                              generateDocs('config.json' != e.path?.fileName.toString(), json.parse(config, 'UTF-8'))
                             }, { error ->
                               log.error('file watch observable exception', error)
                             })
