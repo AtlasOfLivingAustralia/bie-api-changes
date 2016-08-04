@@ -7,10 +7,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="https://www.ala.org.au/commonui-bs3/css/ala-styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.0.1/diff2html.min.css">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -100,90 +98,96 @@
       <div class="row">
         <div class="col-sm-12">
           <h1>BIE API changes</h1>
-          <table class="table table-striped">
-            <tr>
-              <th>Title</th>
-              <th>Previous</th>
-              <th>Current</th>
-              <th>Details</th>
-              <th>Notes</th>
-            </tr>
-            <tr>
-              <td>Species search<br/><small>search.json?q=Macropus</small></td>
-              <td><a href="search.old.json">search.old.json</a></td>
-              <td><a href="search.new.json">search.new.json</a></td>
-              <td><a href="search.html">Change details</a></td>
-              <td><a href="search.notes.html">Change notes</a></td>
-            </tr>
-            <tr>
-              <td>Species search w/ Genus<br/><small>search.json?q=genus%3AMacropus</small></td>
-              <td><a href="search-genus.old.json">search-genus.old.json</a></td>
-              <td><a href="search-genus.new.json">search-genus.new.json</a></td>
-              <td><a href="search-genus.html">Change details</a></td>
-              <td><a href="search-genus.notes.html">Change notes</a></td>
-            </tr>
-            <tr>
-              <td>Species lookup with GUID<br/><small>species/urn:lsid:biodiversity.org.au:afd.taxon:aa745ff0-c776-4d0e-851d-369ba0e6f537.json</small></td>
-              <td><a href="species-guid.old.json">species-guid.old.json</a></td>
-              <td><a href="species-guid.new.json">species-guid.new.json</a></td>
-              <td><a href="species-guid.html">Change details</a></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Species indexed fields<br/><small>admin/indexFields</small></td>
-              <td><a href="index-fields.old.json">index-fields.old.json</a></td>
-              <td><a href="index-fields.new.json">index-fields.new.json</a></td>
-              <td><a href="index-fields.html">Change details</a></td>
-              <td><a href="index-fields.notes.html">Change notes</a></td>
-            </tr>
-            <tr>
-              <td>Bulk species lookup<br/><small>species/lookup/bulk</small></td>
-              <td><a href="species-bulk-lookup.old.json">species-bulk-lookup.old.json</a></td>
-              <td><a href="species-bulk-lookup.new.json">species-bulk-lookup.new.json</a></td>
-              <td><a href="species-bulk-lookup.html">Change details</a></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Bulk species lookup w/ vernacular:true<br/><small>species/lookup/bulk</small></td>
-              <td><a href="species-vernacular-bulk-lookup.old.json">species-vernacular-bulk-lookup.old.json</a></td>
-              <td><a href="species-vernacular-bulk-lookup.new.json">species-vernacular-bulk-lookup.new.json</a></td>
-              <td><a href="species-vernacular-bulk-lookup.html">Change details</a></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Species download<br/><small>download?q=Macropus</small></td>
-              <td><a href="download.old.csv">download.old.csv</a></td>
-              <td><a href="download.new.csv">download.new.csv</a></td>
-              <td><a href="download.html">Change details</a></td>
-              <td><a href="download.notes.html">Change notes</a></td>
-            </tr>
-            <tr class="danger">
-              <td>Species download w/ Genus<br/><small>download?q=genus%3AMacropus</small></td>
-              <td colspan="3">Error during processing</td>
-              <td><a href="download-genus.notes.html">Change notes</a></td>
-            </tr>
-            <tr>
-              <td>Bulk species lookup<br/><small>guid/batch.json?q=macropus&q=pogona</small></td>
-              <td><a href="guid-batch.old.json">guid-batch.old.json</a></td>
-              <td><a href="guid-batch.new.json">guid-batch.new.json</a></td>
-              <td><a href="guid-batch.html">Change details</a></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Higher classifications for GUID<br/><small>classification/urn:lsid:biodiversity.org.au:afd.taxon:31a9b8b8-4e8f-4343-a15f-2ed24e0bf1ae</small></td>
-              <td><a href="classification.old.json">classification.old.json</a></td>
-              <td><a href="classification.new.json">classification.new.json</a></td>
-              <td><a href="classification.html">Change details</a></td>
-              <td><a href="classification.notes.html">Change notes</a></td>
-            </tr>
-            <tr>
-              <td>Autocomplete name<br/><small>search/auto.json?q=Macropus</small></td>
-              <td><a href="autocomplete.old.json">autocomplete.old.json</a></td>
-              <td><a href="autocomplete.new.json">autocomplete.new.json</a></td>
-              <td><a href="autocomplete.html">Change details</a></td>
-              <td></td>
-            </tr>
-          </table>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Previous</th>
+                  <th>Current</th>
+                  <th>Details</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Species search<br/><small>search.json?q=Macropus</small></td>
+                  <td><a href="search.old.json">search.old.json</a></td>
+                  <td><a href="search.new.json">search.new.json</a></td>
+                  <td><a href="search.html">Change details</a></td>
+                  <td><a href="search.notes.html">Change notes</a></td>
+                </tr>
+                <tr>
+                  <td>Species search w/ Genus<br/><small>search.json?q=genus%3AMacropus</small></td>
+                  <td><a href="search-genus.old.json">search-genus.old.json</a></td>
+                  <td><a href="search-genus.new.json">search-genus.new.json</a></td>
+                  <td><a href="search-genus.html">Change details</a></td>
+                  <td><a href="search-genus.notes.html">Change notes</a></td>
+                </tr>
+                <tr>
+                  <td>Species lookup with GUID<br/><small>species/urn:lsid:biodiversity.org.au:afd.taxon:aa745ff0-c776-4d0e-851d-369ba0e6f537.json</small></td>
+                  <td><a href="species-guid.old.json">species-guid.old.json</a></td>
+                  <td><a href="species-guid.new.json">species-guid.new.json</a></td>
+                  <td><a href="species-guid.html">Change details</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Species indexed fields<br/><small>admin/indexFields</small></td>
+                  <td><a href="index-fields.old.json">index-fields.old.json</a></td>
+                  <td><a href="index-fields.new.json">index-fields.new.json</a></td>
+                  <td><a href="index-fields.html">Change details</a></td>
+                  <td><a href="index-fields.notes.html">Change notes</a></td>
+                </tr>
+                <tr>
+                  <td>Bulk species lookup<br/><small>species/lookup/bulk</small></td>
+                  <td><a href="species-bulk-lookup.old.json">species-bulk-lookup.old.json</a></td>
+                  <td><a href="species-bulk-lookup.new.json">species-bulk-lookup.new.json</a></td>
+                  <td><a href="species-bulk-lookup.html">Change details</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Bulk species lookup w/ vernacular:true<br/><small>species/lookup/bulk</small></td>
+                  <td><a href="species-vernacular-bulk-lookup.old.json">species-vernacular-bulk-lookup.old.json</a></td>
+                  <td><a href="species-vernacular-bulk-lookup.new.json">species-vernacular-bulk-lookup.new.json</a></td>
+                  <td><a href="species-vernacular-bulk-lookup.html">Change details</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Species download<br/><small>download?q=Macropus</small></td>
+                  <td><a href="download.old.csv">download.old.csv</a></td>
+                  <td><a href="download.new.csv">download.new.csv</a></td>
+                  <td><a href="download.html">Change details</a></td>
+                  <td><a href="download.notes.html">Change notes</a></td>
+                </tr>
+                <tr class="danger">
+                  <td>Species download w/ Genus<br/><small>download?q=genus%3AMacropus</small></td>
+                  <td colspan="3">Error during processing</td>
+                  <td><a href="download-genus.notes.html">Change notes</a></td>
+                </tr>
+                <tr>
+                  <td>Bulk species lookup<br/><small>guid/batch.json?q=macropus&q=pogona</small></td>
+                  <td><a href="guid-batch.old.json">guid-batch.old.json</a></td>
+                  <td><a href="guid-batch.new.json">guid-batch.new.json</a></td>
+                  <td><a href="guid-batch.html">Change details</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Higher classifications for GUID<br/><small>classification/urn:lsid:biodiversity.org.au:afd.taxon:31a9b8b8-4e8f-4343-a15f-2ed24e0bf1ae</small></td>
+                  <td><a href="classification.old.json">classification.old.json</a></td>
+                  <td><a href="classification.new.json">classification.new.json</a></td>
+                  <td><a href="classification.html">Change details</a></td>
+                  <td><a href="classification.notes.html">Change notes</a></td>
+                </tr>
+                <tr>
+                  <td>Autocomplete name<br/><small>search/auto.json?q=Macropus</small></td>
+                  <td><a href="autocomplete.old.json">autocomplete.old.json</a></td>
+                  <td><a href="autocomplete.new.json">autocomplete.new.json</a></td>
+                  <td><a href="autocomplete.html">Change details</a></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
 

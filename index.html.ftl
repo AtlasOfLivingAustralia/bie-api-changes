@@ -7,10 +7,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="https://www.ala.org.au/commonui-bs3/css/ala-styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.0.1/diff2html.min.css">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -23,32 +21,38 @@
       <div class="row">
         <div class="col-sm-12">
           <h1>BIE API changes</h1>
-          <table class="table table-striped">
-            <tr>
-              <th>Title</th>
-              <th>Previous</th>
-              <th>Current</th>
-              <th>Details</th>
-              <th>Notes</th>
-            </tr>
-          <#list items as item>
-            <#if item.error>
-            <tr class="danger">
-              <td>${item.title}<br/><small>${item.uri}</small></td>
-              <td colspan="3">Error during processing</td>
-              <td><#if item.markedNotes?has_content><a href="${item.name}.notes.html">Change notes</a></#if></td>
-            </tr>
-            <#else>
-            <tr>
-              <td>${item.title}<br/><small>${item.uri}</small></td>
-              <td><a href="${item.oldName}">${item.oldName}</a></td>
-              <td><a href="${item.newName}">${item.newName}</a></td>
-              <td><a href="${item.reportName}">Change details</a></td>
-              <td><#if item.markedNotes?has_content><a href="${item.name}.notes.html">Change notes</a></#if></td>
-            </tr>
-            </#if>
-          </#list>
-          </table>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Previous</th>
+                  <th>Current</th>
+                  <th>Details</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+              <#list items as item>
+              <#if item.error>
+                <tr class="danger">
+                  <td>${item.title}<br/><small>${item.uri}</small></td>
+                  <td colspan="3">Error during processing</td>
+                  <td><#if item.markedNotes?has_content><a href="${item.name}.notes.html">Change notes</a></#if></td>
+                </tr>
+              <#else>
+                <tr>
+                  <td>${item.title}<br/><small>${item.uri}</small></td>
+                  <td><a href="${item.oldName}">${item.oldName}</a></td>
+                  <td><a href="${item.newName}">${item.newName}</a></td>
+                  <td><a href="${item.reportName}">Change details</a></td>
+                  <td><#if item.markedNotes?has_content><a href="${item.name}.notes.html">Change notes</a></#if></td>
+                </tr>
+              </#if>
+              </#list>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
 
