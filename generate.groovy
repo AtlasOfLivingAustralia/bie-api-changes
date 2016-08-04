@@ -211,6 +211,7 @@ class Runner {
     final templateName
     switch (data.content) {
       case 'application/json': templateName = 'json'; break
+      case 'text/csv': templateName = 'csv'; break
       default: templateName = 'generic'; break
     }
     def temp = cfg.getTemplate("details.${templateName}.html.ftl")

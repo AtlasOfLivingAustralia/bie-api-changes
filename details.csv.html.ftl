@@ -31,15 +31,17 @@
         </div>
         <div class="col-sm-12">
           <h3>Old result</h3>
-          <pre>
-            ${oldResult?html}
-          </pre>
+          <div class="table-responsive">
+            <table id="oldTable" class="table table-striped table-condensed table-bordered table-hover">
+            </table>
+          </div>
         </div>
         <div class="col-sm-12">
           <h3>New result</h3>
-          <pre>
-            ${newResult?html}
-          </pre>
+          <div class="table-responsive">
+            <table id="newTable" class="table table-striped table-condensed table-bordered">
+            </table>
+          </div>
         </div>
       </div>
 
@@ -54,8 +56,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.0.1/diff2html.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.0.1/diff2html-ui.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.min.js"></script>
     <script type="text/javascript">
       "use strict";
+      var contentType = "${ content?js_string }";
+      var left = "${ oldResult?js_string }";
+      var right = "${ newResult?js_string }";
       var diffString = "${jsDiff}";
       var diff2htmlUi = new Diff2HtmlUI({diff: diffString});
       diff2htmlUi.draw('#htmldiff', {
@@ -64,6 +70,20 @@
         showFiles: false,
         synchronisedScroll: true,
         matching: 'lines'});
+
+      function csv2Table(data) {
+        var parsed = Papa.parse(data);
+        var output = [],
+        i;
+        for (i = 0; i < parsed.data.length; i++) {
+          output.push("<tr><td>"
+                + parsed.data[i].join("</td><td>")
+                + "</td></tr>");
+        }
+        return output;
+      }
+      $('#oldTable').html(csv2Table(left));
+      $('#newTable').html(csv2Table(right));
     </script>
     </body>
 </html>
