@@ -6,6 +6,8 @@ View the current generated documents at <https://atlasoflivingaustralia.github.i
 
 JSON diffs are provided by `jsondiffpatch` JS library entirely on the client side, others by the `diff` command line tool then`diff2html` on the client side.
 
+JSON diffs try to be smart about arrays - if an array entry has a 'guid', '_id', 'id' or 'name' property, then that array elements 'identity' is tracked by that value.  This means that if array entries have changed index it can be shown in the diff.  Of course, if a GUID has changed then it appears like the whole object has changed (ie the entire array entry block will be in red and struck through with a replacement block that may or may not have different values for non-guid properties).
+
 New and old BIE base URIs are currently hard coded for BIE in `generate.groovy`.
 
 Individual services are configured in `config.json`.  To add notes for a diff, create a file `$NAME.notes.md` where `$NAME` matches the name in `config.json`.
