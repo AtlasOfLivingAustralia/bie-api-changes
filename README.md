@@ -25,3 +25,4 @@ and then regenerate the pages.  Eg `./generate.groovy --skip --watch`
 Use `npm install -g http-server` to install a simple local HTTP server then
 `http-server` in this directory to serve files locally on <http://localhost:8080/>.
 
+When you are satisified with changes to your local pages, `git add . && git commit -m "your message" && git push` to deploy to the gh-pages branch and update the <https://atlasoflivingaustralia.github.io/bie-api-changes> content (which are one and the same).
