@@ -2,6 +2,8 @@
 
 Automatically generates a diff of old and new JSON / other documents.
 
+View the current generated documents at <https://atlasoflivingaustralia.github.io/bie-api-changes>.
+
 JSON diffs are provided by `jsondiffpatch` JS library entirely on the client side, others by the `diff` command line tool then`diff2html` on the client side.
 
 New and old BIE base URIs are currently hard coded for BIE in `generate.groovy`.
