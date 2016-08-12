@@ -1,0 +1,930 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "taxonConcept": {
+      "type": "object",
+      "properties": {
+        "infoSourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "infoSourceName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "infoSourceURL": {
+          "type": "string",
+          "minLength": 1
+        },
+        "id": {
+          "type": "number"
+        },
+        "guid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "parentId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "parentGuid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "nameGuid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "nameString": {
+          "type": "string",
+          "minLength": 1
+        },
+        "author": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rankID": {
+          "type": "number"
+        },
+        "rankString": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rawRankString": {
+          "type": "string",
+          "minLength": 1
+        },
+        "left": {
+          "type": "number"
+        },
+        "right": {
+          "type": "number"
+        },
+        "isPreferred": {
+          "type": "boolean"
+        },
+        "isDraft": {
+          "type": "boolean"
+        },
+        "isProtologue": {
+          "type": "boolean"
+        },
+        "isExcluded": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "infoSourceId",
+        "infoSourceName",
+        "infoSourceURL",
+        "id",
+        "guid",
+        "parentId",
+        "parentGuid",
+        "nameGuid",
+        "nameString",
+        "author",
+        "rankID",
+        "rankString",
+        "rawRankString",
+        "left",
+        "right",
+        "isPreferred",
+        "isDraft",
+        "isProtologue",
+        "isExcluded"
+      ]
+    },
+    "taxonName": {
+      "type": "object",
+      "properties": {
+        "guid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "nameComplete": {
+          "type": "string",
+          "minLength": 1
+        },
+        "authorship": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rankString": {
+          "type": "string",
+          "minLength": 1
+        },
+        "publishedInCitation": {
+          "type": "string"
+        },
+        "nomenclaturalCode": {
+          "type": "string",
+          "minLength": 1
+        },
+        "typificationString": {
+          "type": "string"
+        },
+        "microReference": {
+          "type": "string"
+        },
+        "genusPart": {
+          "type": "string",
+          "minLength": 1
+        },
+        "specificEpithet": {
+          "type": "string",
+          "minLength": 1
+        },
+        "infraspecificEpithet": {
+          "type": "string"
+        },
+        "infragenericEpithet": {
+          "type": "string"
+        },
+        "hybridForm": {
+          "type": "string"
+        },
+        "basionymAuthorship": {
+          "type": "string",
+          "minLength": 1
+        },
+        "nomenclaturalStatus": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "guid",
+        "nameComplete",
+        "authorship",
+        "rankString",
+        "publishedInCitation",
+        "nomenclaturalCode",
+        "typificationString",
+        "microReference",
+        "genusPart",
+        "specificEpithet",
+        "infraspecificEpithet",
+        "infragenericEpithet",
+        "hybridForm",
+        "basionymAuthorship",
+        "nomenclaturalStatus"
+      ]
+    },
+    "classification": {
+      "type": "object",
+      "properties": {
+        "guid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scientificName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rank": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rankId": {
+          "type": "number"
+        },
+        "kingdom": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kingdomGuid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "phylum": {
+          "type": "string",
+          "minLength": 1
+        },
+        "phylumGuid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "clazz": {
+          "type": "string",
+          "minLength": 1
+        },
+        "clazzGuid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "order": {
+          "type": "string",
+          "minLength": 1
+        },
+        "orderGuid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "family": {
+          "type": "string",
+          "minLength": 1
+        },
+        "familyGuid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "genus": {
+          "type": "string",
+          "minLength": 1
+        },
+        "genusGuid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "species": {
+          "type": "string",
+          "minLength": 1
+        },
+        "speciesGuid": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "guid",
+        "scientificName",
+        "rank",
+        "rankId",
+        "kingdom",
+        "kingdomGuid",
+        "phylum",
+        "phylumGuid",
+        "clazz",
+        "clazzGuid",
+        "order",
+        "orderGuid",
+        "family",
+        "familyGuid",
+        "genus",
+        "genusGuid",
+        "species",
+        "speciesGuid"
+      ]
+    },
+    "identifiers": {
+      "type": "array",
+      "items": {
+        "required": [],
+        "properties": {}
+      }
+    },
+    "synonyms": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "infoSourceId",
+          "infoSourceName",
+          "infoSourceURL",
+          "id",
+          "guid",
+          "nameGuid",
+          "nameString",
+          "author",
+          "authorYear",
+          "publishedInCitation",
+          "publishedIn",
+          "isPreferred",
+          "isDraft",
+          "isProtologue",
+          "isExcluded",
+          "type",
+          "relationship",
+          "description"
+        ],
+        "properties": {
+          "infoSourceId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceURL": {
+            "type": "string",
+            "minLength": 1
+          },
+          "id": {
+            "type": "number"
+          },
+          "guid": {
+            "type": "string",
+            "minLength": 1
+          },
+          "nameGuid": {
+            "type": "string",
+            "minLength": 1
+          },
+          "nameString": {
+            "type": "string",
+            "minLength": 1
+          },
+          "author": {
+            "type": "string",
+            "minLength": 1
+          },
+          "authorYear": {
+            "type": "string",
+            "minLength": 1
+          },
+          "publishedInCitation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "publishedIn": {
+            "type": "string",
+            "minLength": 1
+          },
+          "isPreferred": {
+            "type": "boolean"
+          },
+          "isDraft": {
+            "type": "boolean"
+          },
+          "isProtologue": {
+            "type": "boolean"
+          },
+          "isExcluded": {
+            "type": "boolean"
+          },
+          "type": {
+            "type": "number"
+          },
+          "relationship": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "commonNames": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "infoSourceId",
+          "infoSourceUid",
+          "documentId",
+          "infoSourceName",
+          "infoSourceURL",
+          "title",
+          "identifier",
+          "nameString",
+          "noOfRankings",
+          "ranking",
+          "isBlackListed",
+          "isPreferred",
+          "preferred"
+        ],
+        "properties": {
+          "infoSourceId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceUid": {
+            "type": "string",
+            "minLength": 1
+          },
+          "documentId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceURL": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "identifier": {
+            "type": "string",
+            "minLength": 1
+          },
+          "nameString": {
+            "type": "string",
+            "minLength": 1
+          },
+          "noOfRankings": {
+            "type": "number"
+          },
+          "ranking": {
+            "type": "number"
+          },
+          "isBlackListed": {
+            "type": "boolean"
+          },
+          "isPreferred": {
+            "type": "boolean"
+          },
+          "preferred": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "childConcepts": {
+      "type": "array",
+      "items": {
+        "required": [],
+        "properties": {}
+      }
+    },
+    "parentConcepts": {
+      "type": "array",
+      "items": {
+        "required": [],
+        "properties": {}
+      }
+    },
+    "sameAsConcepts": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "id",
+          "guid",
+          "nameGuid",
+          "nameString",
+          "author",
+          "isPreferred",
+          "isDraft",
+          "isProtologue",
+          "isExcluded"
+        ],
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "guid": {
+            "type": "string",
+            "minLength": 1
+          },
+          "nameGuid": {
+            "type": "string",
+            "minLength": 1
+          },
+          "nameString": {
+            "type": "string",
+            "minLength": 1
+          },
+          "author": {
+            "type": "string",
+            "minLength": 1
+          },
+          "isPreferred": {
+            "type": "boolean"
+          },
+          "isDraft": {
+            "type": "boolean"
+          },
+          "isProtologue": {
+            "type": "boolean"
+          },
+          "isExcluded": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "pestStatuses": {
+      "type": "array",
+      "items": {
+        "required": [],
+        "properties": {}
+      }
+    },
+    "conservationStatuses": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "infoSourceId",
+          "infoSourceName",
+          "infoSourceURL",
+          "rawStatus",
+          "status",
+          "rawCode"
+        ],
+        "properties": {
+          "infoSourceId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceURL": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rawStatus": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rawCode": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "simpleProperties": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "infoSourceId",
+          "infoSourceUid",
+          "documentId",
+          "infoSourceName",
+          "infoSourceURL",
+          "title",
+          "identifier",
+          "name",
+          "value"
+        ],
+        "properties": {
+          "infoSourceId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceUid": {
+            "type": "string",
+            "minLength": 1
+          },
+          "documentId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceURL": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "identifier": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "value": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "images": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "infoSourceId",
+          "infoSourceUid",
+          "documentId",
+          "infoSourceName",
+          "infoSourceURL",
+          "title",
+          "identifier",
+          "contentType",
+          "repoLocation",
+          "dcLocation",
+          "thumbnail",
+          "creator",
+          "isPartOf",
+          "licence",
+          "noOfRankings",
+          "ranking",
+          "isBlackListed",
+          "occurrenceUid",
+          "occurrenceRowKey",
+          "largeImageUrl",
+          "smallImageUrl",
+          "preferred"
+        ],
+        "properties": {
+          "infoSourceId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceUid": {
+            "type": "string",
+            "minLength": 1
+          },
+          "documentId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceURL": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "identifier": {
+            "type": "string",
+            "minLength": 1
+          },
+          "contentType": {
+            "type": "string",
+            "minLength": 1
+          },
+          "repoLocation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "dcLocation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "thumbnail": {
+            "type": "string",
+            "minLength": 1
+          },
+          "creator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "isPartOf": {
+            "type": "string",
+            "minLength": 1
+          },
+          "licence": {
+            "type": "string",
+            "minLength": 1
+          },
+          "noOfRankings": {
+            "type": "number"
+          },
+          "ranking": {
+            "type": "number"
+          },
+          "isBlackListed": {
+            "type": "boolean"
+          },
+          "occurrenceUid": {
+            "type": "string",
+            "minLength": 1
+          },
+          "occurrenceRowKey": {
+            "type": "string",
+            "minLength": 1
+          },
+          "largeImageUrl": {
+            "type": "string",
+            "minLength": 1
+          },
+          "smallImageUrl": {
+            "type": "string",
+            "minLength": 1
+          },
+          "preferred": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "distributionImages": {
+      "type": "array",
+      "items": {
+        "required": [],
+        "properties": {}
+      }
+    },
+    "screenshotImages": {
+      "type": "array",
+      "items": {
+        "required": [],
+        "properties": {}
+      }
+    },
+    "extantStatuses": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "infoSourceId",
+          "infoSourceName",
+          "infoSourceURL",
+          "status",
+          "statusAsString"
+        ],
+        "properties": {
+          "infoSourceId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceURL": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "minLength": 1
+          },
+          "statusAsString": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "habitats": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "infoSourceId",
+          "infoSourceName",
+          "infoSourceURL",
+          "status",
+          "statusAsString"
+        ],
+        "properties": {
+          "infoSourceId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceURL": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "minLength": 1
+          },
+          "statusAsString": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "regionTypes": {
+      "type": "array",
+      "items": {
+        "required": [],
+        "properties": {}
+      }
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "required": [],
+        "properties": {}
+      }
+    },
+    "publicationReference": {
+      "type": "array",
+      "items": {
+        "required": [],
+        "properties": {}
+      }
+    },
+    "identificationKeys": {
+      "type": "array",
+      "items": {
+        "required": [],
+        "properties": {}
+      }
+    },
+    "specimenHolding": {
+      "type": "array",
+      "items": {
+        "required": [],
+        "properties": {}
+      }
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "required": [],
+        "properties": {}
+      }
+    },
+    "isAustralian": {
+      "type": "boolean"
+    },
+    "linkIdentifier": {
+      "type": "string",
+      "minLength": 1
+    },
+    "extantStatusus": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "infoSourceId",
+          "infoSourceName",
+          "infoSourceURL",
+          "status",
+          "statusAsString"
+        ],
+        "properties": {
+          "infoSourceId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceURL": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "minLength": 1
+          },
+          "statusAsString": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "taxonConcept",
+    "taxonName",
+    "classification",
+    "identifiers",
+    "synonyms",
+    "commonNames",
+    "childConcepts",
+    "parentConcepts",
+    "sameAsConcepts",
+    "pestStatuses",
+    "conservationStatuses",
+    "simpleProperties",
+    "images",
+    "distributionImages",
+    "screenshotImages",
+    "extantStatuses",
+    "habitats",
+    "regionTypes",
+    "references",
+    "publicationReference",
+    "identificationKeys",
+    "specimenHolding",
+    "categories",
+    "isAustralian",
+    "linkIdentifier",
+    "extantStatusus"
+  ]
+}

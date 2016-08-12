@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "autoCompleteList": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "guid",
+          "name",
+          "occurrenceCount",
+          "georeferencedCount",
+          "commonName",
+          "rankId",
+          "rankString",
+          "left",
+          "right"
+        ],
+        "properties": {
+          "guid": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "occurrenceCount": {
+            "type": "number"
+          },
+          "georeferencedCount": {
+            "type": "number"
+          },
+          "scientificNameMatches": {
+            "type": "array",
+            "items": {
+              "required": [],
+              "properties": {}
+            }
+          },
+          "commonNameMatches": {
+            "type": "array",
+            "items": {
+              "required": [],
+              "properties": {}
+            }
+          },
+          "commonName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "matchedNames": {
+            "type": "array",
+            "items": {
+              "required": [],
+              "properties": {}
+            }
+          },
+          "rankId": {
+            "type": "number"
+          },
+          "rankString": {
+            "type": "string",
+            "minLength": 1
+          },
+          "left": {
+            "type": "number"
+          },
+          "right": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "autoCompleteList"
+  ]
+}

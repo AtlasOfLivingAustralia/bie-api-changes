@@ -1,0 +1,172 @@
+{
+  "type": "array",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "type": "object",
+    "required": [
+      "guid",
+      "name",
+      "idxType",
+      "score",
+      "parentGuid",
+      "commonName",
+      "nameComplete",
+      "commonNameSingle",
+      "hasChildren",
+      "rank",
+      "rankId",
+      "rawRank",
+      "isAustralian",
+      "highlight",
+      "image",
+      "thumbnail",
+      "left",
+      "right",
+      "kingdom",
+      "phylum",
+      "classs",
+      "order",
+      "family",
+      "genus",
+      "author",
+      "linkIdentifier",
+      "imageSource",
+      "imageCount",
+      "isExcluded",
+      "largeImageUrl",
+      "smallImageUrl",
+      "thumbnailUrl",
+      "imageMetadataUrl"
+    ],
+    "properties": {
+      "guid": {
+        "type": "string",
+        "minLength": 1
+      },
+      "name": {
+        "type": "string",
+        "minLength": 1
+      },
+      "idxType": {
+        "type": "string",
+        "minLength": 1
+      },
+      "score": {
+        "type": "number"
+      },
+      "parentGuid": {
+        "type": "string",
+        "minLength": 1
+      },
+      "commonName": {
+        "type": "string",
+        "minLength": 1
+      },
+      "nameComplete": {
+        "type": "string",
+        "minLength": 1
+      },
+      "commonNameSingle": {
+        "type": "string",
+        "minLength": 1
+      },
+      "hasChildren": {
+        "type": "boolean"
+      },
+      "rank": {
+        "type": "string",
+        "minLength": 1
+      },
+      "rankId": {
+        "type": "number"
+      },
+      "rawRank": {
+        "type": "string",
+        "minLength": 1
+      },
+      "isAustralian": {
+        "type": "string",
+        "minLength": 1
+      },
+      "highlight": {
+        "type": "string",
+        "minLength": 1
+      },
+      "image": {
+        "type": "string",
+        "minLength": 1
+      },
+      "thumbnail": {
+        "type": "string",
+        "minLength": 1
+      },
+      "left": {
+        "type": "number"
+      },
+      "right": {
+        "type": "number"
+      },
+      "kingdom": {
+        "type": "string",
+        "minLength": 1
+      },
+      "phylum": {
+        "type": "string",
+        "minLength": 1
+      },
+      "classs": {
+        "type": "string",
+        "minLength": 1
+      },
+      "order": {
+        "type": "string",
+        "minLength": 1
+      },
+      "family": {
+        "type": "string",
+        "minLength": 1
+      },
+      "genus": {
+        "type": "string",
+        "minLength": 1
+      },
+      "author": {
+        "type": "string",
+        "minLength": 1
+      },
+      "linkIdentifier": {
+        "type": "string",
+        "minLength": 1
+      },
+      "imageSource": {
+        "type": "string",
+        "minLength": 1
+      },
+      "imageCount": {
+        "type": "number"
+      },
+      "isExcluded": {
+        "type": "boolean"
+      },
+      "largeImageUrl": {
+        "type": "string",
+        "minLength": 1
+      },
+      "smallImageUrl": {
+        "type": "string",
+        "minLength": 1
+      },
+      "thumbnailUrl": {
+        "type": "string",
+        "minLength": 1
+      },
+      "imageMetadataUrl": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

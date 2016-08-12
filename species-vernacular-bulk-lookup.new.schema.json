@@ -1,0 +1,133 @@
+{
+  "type": "array",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "type": "object",
+    "required": [
+      "author",
+      "classs",
+      "commonName",
+      "conservationStatus",
+      "family",
+      "genus",
+      "guid",
+      "idxType",
+      "image",
+      "imageMetadataUrl",
+      "kingdom",
+      "largeImageUrl",
+      "name",
+      "nameComplete",
+      "order",
+      "parentGuid",
+      "phylum",
+      "rank",
+      "rankId",
+      "score",
+      "smallImageUrl",
+      "taxonomicStatus",
+      "thumbnailUrl"
+    ],
+    "properties": {
+      "acceptedConceptGuid": {},
+      "acceptedConceptName": {},
+      "author": {
+        "type": "string",
+        "minLength": 1
+      },
+      "classs": {
+        "type": "string",
+        "minLength": 1
+      },
+      "commonName": {
+        "type": "string",
+        "minLength": 1
+      },
+      "conservationStatus": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "family": {
+        "type": "string",
+        "minLength": 1
+      },
+      "genus": {
+        "type": "string",
+        "minLength": 1
+      },
+      "guid": {
+        "type": "string",
+        "minLength": 1
+      },
+      "highlight": {},
+      "idxType": {
+        "type": "string",
+        "minLength": 1
+      },
+      "image": {
+        "type": "string",
+        "minLength": 1
+      },
+      "imageMetadataUrl": {
+        "type": "string",
+        "minLength": 1
+      },
+      "imageUrl": {},
+      "kingdom": {
+        "type": "string",
+        "minLength": 1
+      },
+      "largeImageUrl": {
+        "type": "string",
+        "minLength": 1
+      },
+      "linkIdentifier": {},
+      "name": {
+        "type": "string",
+        "minLength": 1
+      },
+      "nameComplete": {
+        "type": "string",
+        "minLength": 1
+      },
+      "order": {
+        "type": "string",
+        "minLength": 1
+      },
+      "parentGuid": {
+        "type": "string",
+        "minLength": 1
+      },
+      "phylum": {
+        "type": "string",
+        "minLength": 1
+      },
+      "rank": {
+        "type": "string",
+        "minLength": 1
+      },
+      "rankId": {
+        "type": "number"
+      },
+      "score": {
+        "type": "number"
+      },
+      "smallImageUrl": {
+        "type": "string",
+        "minLength": 1
+      },
+      "taxonomicStatus": {
+        "type": "string",
+        "minLength": 1
+      },
+      "thumbnailUrl": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

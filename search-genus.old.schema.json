@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "searchResults": {
+      "type": "object",
+      "properties": {
+        "pageSize": {
+          "type": "number"
+        },
+        "startIndex": {
+          "type": "number"
+        },
+        "totalRecords": {
+          "type": "number"
+        },
+        "sort": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dir": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "facetResults": {
+          "type": "array",
+          "items": {
+            "required": [],
+            "properties": {}
+          }
+        },
+        "query": {
+          "type": "string",
+          "minLength": 1
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "required": [],
+            "properties": {}
+          }
+        }
+      },
+      "required": [
+        "pageSize",
+        "startIndex",
+        "totalRecords",
+        "sort",
+        "dir",
+        "status",
+        "facetResults",
+        "query",
+        "results"
+      ]
+    }
+  },
+  "required": [
+    "searchResults"
+  ]
+}

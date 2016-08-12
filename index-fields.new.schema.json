@@ -1,0 +1,33 @@
+{
+  "type": "array",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "type": "object",
+    "required": [
+      "dataType",
+      "indexed",
+      "name",
+      "stored"
+    ],
+    "properties": {
+      "dataType": {
+        "type": "string",
+        "minLength": 1
+      },
+      "indexed": {
+        "type": "boolean"
+      },
+      "name": {
+        "type": "string",
+        "minLength": 1
+      },
+      "numberDistinctValues": {},
+      "stored": {
+        "type": "boolean"
+      }
+    }
+  }
+}

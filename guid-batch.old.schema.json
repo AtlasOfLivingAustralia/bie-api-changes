@@ -1,0 +1,175 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "macropus": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "infoSourceName",
+          "infoSourceURL",
+          "infoSourceId",
+          "identifier",
+          "name",
+          "acceptedIdentifier",
+          "acceptedName"
+        ],
+        "properties": {
+          "infoSourceName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceURL": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "identifier": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "acceptedIdentifier": {
+            "type": "string",
+            "minLength": 1
+          },
+          "acceptedName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "otherGuids": {
+            "type": "array",
+            "uniqueItems": true,
+            "minItems": 1,
+            "items": {
+              "required": [
+                "infoSourceName",
+                "infoSourceURL",
+                "infoSourceId",
+                "identifier",
+                "name"
+              ],
+              "properties": {
+                "infoSourceName": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "infoSourceURL": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "infoSourceId": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "identifier": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "name": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "pogona": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "infoSourceName",
+          "infoSourceURL",
+          "infoSourceId",
+          "identifier",
+          "name",
+          "acceptedIdentifier",
+          "acceptedName"
+        ],
+        "properties": {
+          "infoSourceName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceURL": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "identifier": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "acceptedIdentifier": {
+            "type": "string",
+            "minLength": 1
+          },
+          "acceptedName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "otherGuids": {
+            "type": "array",
+            "uniqueItems": true,
+            "minItems": 1,
+            "items": {
+              "required": [
+                "infoSourceName",
+                "infoSourceURL",
+                "infoSourceId",
+                "identifier",
+                "name"
+              ],
+              "properties": {
+                "infoSourceName": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "infoSourceURL": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "infoSourceId": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "identifier": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "name": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "macropus",
+    "pogona"
+  ]
+}

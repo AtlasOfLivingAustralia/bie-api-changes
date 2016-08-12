@@ -29,18 +29,59 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-12">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">JSON Diff</h3>
-            </div>
-            <div class="panel-body">
-              <div class="header-options">
-                <input id="showunchanged" type="checkbox" checked>
-                <label for="showunchanged">
-                  Show unchanged values
-                </label>
+          <div class="header-options">
+            <input id="show-unchanged" class="show-unchanged" type="checkbox" checked>
+            <label for="show-unchanged">
+              Show unchanged values
+            </label>
+          </div>
+          <div>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#data" aria-controls="data" role="tab" data-toggle="tab">Data</a></li>
+              <li role="presentation"><a href="#schema" aria-controls="schema" role="tab" data-toggle="tab">Schema</a></li>
+              <!-- <li role="presentation"><a href="#fake" aria-controls="fake" role="tab" data-toggle="tab">Fake Date</a></li> -->
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="data">
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">JSON Data Diff</h3>
+                  </div>
+                  <div class="panel-body">
+                    <div id="data-visual">
+                    </div>
+                  </div>
+                </div>
+
               </div>
-              <div id="visual">
+              <div role="tabpanel" class="tab-pane" id="schema">
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">JSON Schema Diff</h3>
+                  </div>
+                  <div class="panel-body">
+                    <div id="schema-visual">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div role="tabpanel" class="tab-pane" id="fake">
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Faked JSON Data Diff</h3>
+                  </div>
+                  <div class="panel-body">
+                    <div id="fake-visual">
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
@@ -69,10 +110,251 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsondiffpatch/0.1.43/jsondiffpatch-full.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsondiffpatch/0.1.43/jsondiffpatch-formatters.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/json-schema-faker/0.3.4/json-schema-faker.min.js"></script>
     <script type="text/javascript">
       "use strict";
       var left = {"macropus":[{"infoSourceName":"Australian Faunal Directory","infoSourceURL":"http://www.environment.gov.au/biodiversity/abrs/online-resources/fauna/afd/taxa/Macropus","infoSourceId":"1","identifier":"urn:lsid:biodiversity.org.au:afd.taxon:9e6a0bba-de5b-4465-8544-aa8fe3943fab","name":"Macropus","acceptedIdentifier":"urn:lsid:biodiversity.org.au:afd.taxon:9e6a0bba-de5b-4465-8544-aa8fe3943fab","acceptedName":"Macropus","otherGuids":[{"infoSourceName":"Australian Faunal Directory","infoSourceURL":"http://www.environment.gov.au/biodiversity/abrs/online-resources/fauna/afd/home","infoSourceId":"1","identifier":"urn:lsid:biodiversity.org.au:afd.taxon:1909bd3d-ad87-4bc0-8bae-3fb17f8ea2e0","name":"Macropus"},{"infoSourceName":"Australian Faunal Directory","infoSourceURL":"http://www.environment.gov.au/biodiversity/abrs/online-resources/fauna/afd/home","infoSourceId":"1","identifier":"urn:lsid:biodiversity.org.au:afd.taxon:558a729a-789b-4b00-a685-8843dc447319","name":"Macropus"}]}],"pogona":[{"infoSourceName":"Australian Faunal Directory","infoSourceURL":"http://www.environment.gov.au/biodiversity/abrs/online-resources/fauna/afd/taxa/Pogona","infoSourceId":"1","identifier":"urn:lsid:biodiversity.org.au:afd.taxon:e25397e8-613d-4bdd-88de-1bd6c36d26ee","name":"Pogona","acceptedIdentifier":"urn:lsid:biodiversity.org.au:afd.taxon:e25397e8-613d-4bdd-88de-1bd6c36d26ee","acceptedName":"Pogona","otherGuids":[{"infoSourceName":"Australian Faunal Directory","infoSourceURL":"http://www.environment.gov.au/biodiversity/abrs/online-resources/fauna/afd/home","infoSourceId":"1","identifier":"urn:lsid:biodiversity.org.au:afd.taxon:09c78a17-785e-4766-885c-8c3ba8d999d7","name":"Pogona"},{"infoSourceName":"Australian Faunal Directory","infoSourceURL":"http://www.environment.gov.au/biodiversity/abrs/online-resources/fauna/afd/home","infoSourceId":"1","identifier":"urn:lsid:biodiversity.org.au:afd.taxon:31c2f31b-7c77-475d-b747-51058c5c4ec8","name":"Pogona"},{"infoSourceName":"Australian Faunal Directory","infoSourceURL":"http://www.environment.gov.au/biodiversity/abrs/online-resources/fauna/afd/home","infoSourceId":"1","identifier":"urn:lsid:biodiversity.org.au:afd.taxon:c52f88bf-8799-4d3d-8ba9-2a2df45b0eb2","name":"Pogona"}]}]};
       var right = {"macropus":[{"identifier":"urn:lsid:biodiversity.org.au:afd.taxon:9e6a0bba-de5b-4465-8544-aa8fe3943fab","name":"Macropus","acceptedIdentifier":"urn:lsid:biodiversity.org.au:afd.taxon:9e6a0bba-de5b-4465-8544-aa8fe3943fab","acceptedName":null}],"pogona":[{"identifier":"urn:lsid:biodiversity.org.au:afd.taxon:7c39419a-4e35-41f8-9618-f68917dbf907","name":"Pogona","acceptedIdentifier":"urn:lsid:biodiversity.org.au:afd.taxon:7c39419a-4e35-41f8-9618-f68917dbf907","acceptedName":null}]};
+      var leftSchema = {
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "macropus": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "infoSourceName",
+          "infoSourceURL",
+          "infoSourceId",
+          "identifier",
+          "name",
+          "acceptedIdentifier",
+          "acceptedName"
+        ],
+        "properties": {
+          "infoSourceName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceURL": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "identifier": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "acceptedIdentifier": {
+            "type": "string",
+            "minLength": 1
+          },
+          "acceptedName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "otherGuids": {
+            "type": "array",
+            "uniqueItems": true,
+            "minItems": 1,
+            "items": {
+              "required": [
+                "infoSourceName",
+                "infoSourceURL",
+                "infoSourceId",
+                "identifier",
+                "name"
+              ],
+              "properties": {
+                "infoSourceName": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "infoSourceURL": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "infoSourceId": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "identifier": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "name": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "pogona": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "infoSourceName",
+          "infoSourceURL",
+          "infoSourceId",
+          "identifier",
+          "name",
+          "acceptedIdentifier",
+          "acceptedName"
+        ],
+        "properties": {
+          "infoSourceName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceURL": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "identifier": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "acceptedIdentifier": {
+            "type": "string",
+            "minLength": 1
+          },
+          "acceptedName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "otherGuids": {
+            "type": "array",
+            "uniqueItems": true,
+            "minItems": 1,
+            "items": {
+              "required": [
+                "infoSourceName",
+                "infoSourceURL",
+                "infoSourceId",
+                "identifier",
+                "name"
+              ],
+              "properties": {
+                "infoSourceName": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "infoSourceURL": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "infoSourceId": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "identifier": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "name": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "macropus",
+    "pogona"
+  ]
+};
+      var rightSchema = {
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "macropus": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "identifier",
+          "name",
+          "acceptedIdentifier"
+        ],
+        "properties": {
+          "identifier": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "acceptedIdentifier": {
+            "type": "string",
+            "minLength": 1
+          },
+          "acceptedName": {}
+        }
+      }
+    },
+    "pogona": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "identifier",
+          "name",
+          "acceptedIdentifier"
+        ],
+        "properties": {
+          "identifier": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "acceptedIdentifier": {
+            "type": "string",
+            "minLength": 1
+          },
+          "acceptedName": {}
+        }
+      }
+    }
+  },
+  "required": [
+    "macropus",
+    "pogona"
+  ]
+};
       var instance = jsondiffpatch.create({
         objectHash: function(obj, index) {
           if (typeof obj.guid !== 'undefined') {
@@ -95,14 +377,25 @@
         }
       });
       var delta = instance.diff(left, right);
+      var schemaDelta = instance.diff(leftSchema, rightSchema);
       // beautiful html diff
-      document.getElementById('visual').innerHTML = jsondiffpatch.formatters.html.format(delta, left);
-      jsondiffpatch.formatters.html.showUnchanged($('#showunchanged').is(':checked'), null, 800);
-      $('#showunchanged').on('change', function() {
+      document.getElementById('data-visual').innerHTML = jsondiffpatch.formatters.html.format(delta, left);
+      document.getElementById('schema-visual').innerHTML = jsondiffpatch.formatters.html.format(schemaDelta, leftSchema);
+      jsondiffpatch.formatters.html.showUnchanged($('#show-unchanged').is(':checked'), null, 800);
+      $('#show-unchanged').on('change', function() {
         jsondiffpatch.formatters.html.showUnchanged($(this).is(':checked'), null, 800);
       });
+
+      $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        jsondiffpatch.formatters.html.showUnchanged($('#show-unchanged').is(':checked'), null, 800);
+      });
+
       // self-explained json
       // document.getElementById('annotated').innerHTML = jsondiffpatch.formatters.annotated.format(delta, left);
+      // var leftFake = jsf(leftSchema);
+      // var rightFake = jsf(leftSchema);
+      // var fakeDelta = instance.diff(leftFake, rightFake);
+      // document.getElementById('fake-visual').innerHTML = jsondiffpatch.formatters.html.format(fakeDelta, leftFake);
     </script>
     </body>
 </html>

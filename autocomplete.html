@@ -29,18 +29,59 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-12">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">JSON Diff</h3>
-            </div>
-            <div class="panel-body">
-              <div class="header-options">
-                <input id="showunchanged" type="checkbox" checked>
-                <label for="showunchanged">
-                  Show unchanged values
-                </label>
+          <div class="header-options">
+            <input id="show-unchanged" class="show-unchanged" type="checkbox" checked>
+            <label for="show-unchanged">
+              Show unchanged values
+            </label>
+          </div>
+          <div>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#data" aria-controls="data" role="tab" data-toggle="tab">Data</a></li>
+              <li role="presentation"><a href="#schema" aria-controls="schema" role="tab" data-toggle="tab">Schema</a></li>
+              <!-- <li role="presentation"><a href="#fake" aria-controls="fake" role="tab" data-toggle="tab">Fake Date</a></li> -->
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="data">
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">JSON Data Diff</h3>
+                  </div>
+                  <div class="panel-body">
+                    <div id="data-visual">
+                    </div>
+                  </div>
+                </div>
+
               </div>
-              <div id="visual">
+              <div role="tabpanel" class="tab-pane" id="schema">
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">JSON Schema Diff</h3>
+                  </div>
+                  <div class="panel-body">
+                    <div id="schema-visual">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div role="tabpanel" class="tab-pane" id="fake">
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Faked JSON Data Diff</h3>
+                  </div>
+                  <div class="panel-body">
+                    <div id="fake-visual">
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
@@ -69,10 +110,163 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsondiffpatch/0.1.43/jsondiffpatch-full.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsondiffpatch/0.1.43/jsondiffpatch-formatters.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/json-schema-faker/0.3.4/json-schema-faker.min.js"></script>
     <script type="text/javascript">
       "use strict";
       var left = {"autoCompleteList":[{"guid":"urn:lsid:biodiversity.org.au:afd.taxon:9e6a0bba-de5b-4465-8544-aa8fe3943fab","name":"Macropus","occurrenceCount":378,"georeferencedCount":378,"scientificNameMatches":["<b>Macropus</b>"],"matchedNames":["Macropus"],"rankId":6000,"rankString":"genus","left":402742,"right":402799},{"guid":"urn:lsid:biodiversity.org.au:afd.taxon:c42a3e19-eeff-4282-8366-ab3ee2f4f73c","name":"Macropus greyi","occurrenceCount":6,"georeferencedCount":6,"scientificNameMatches":["<b>Macropus</b> greyi"],"commonNameMatches":[],"commonName":"Toolache Wallaby, Tooloche Wallaby","matchedNames":["Macropus greyi"],"rankId":7000,"rankString":"species","left":402745,"right":402746},{"guid":"urn:lsid:biodiversity.org.au:afd.taxon:53026a84-c638-4ea7-a498-dcbf611f3173","name":"Macropus eugenii","occurrenceCount":100,"georeferencedCount":47,"scientificNameMatches":["<b>Macropus</b> eugenii"],"commonNameMatches":[],"commonName":" Tamar Wallaby, Dama Wallaby, Tammar Wallaby, Tammar, Dama Wallaby","matchedNames":["Macropus eugenii"],"rankId":7000,"rankString":"species","left":402761,"right":402768},{"guid":"urn:lsid:biodiversity.org.au:afd.taxon:ec13cfac-4783-46c2-9ad3-50e2c60f1348","name":"Macropus bernardus","occurrenceCount":5,"georeferencedCount":5,"scientificNameMatches":["<b>Macropus</b> bernardus"],"commonNameMatches":[],"commonName":" Bernard's Wallaroo, Black Wallaroo, Woodward's Wallaroo","matchedNames":["Macropus bernardus"],"rankId":7000,"rankString":"species","left":402781,"right":402782},{"guid":"urn:lsid:biodiversity.org.au:afd.taxon:9d5d9e5b-4374-4129-aa9a-ff7921f3b1c9","name":"Macropus robustus","occurrenceCount":18,"georeferencedCount":18,"scientificNameMatches":["<b>Macropus</b> robustus"],"commonNameMatches":[],"commonName":" Barrow Island Euro,  Euro,  Hill Wallaroo, Common Wallaroo, Euro, Euro, Red Wallaroo, Wallaroo","matchedNames":["Macropus robustus"],"rankId":7000,"rankString":"species","left":402771,"right":402780},{"guid":"urn:lsid:biodiversity.org.au:afd.taxon:50cae89d-9af7-4901-883d-7db6c5cc3116","name":"Macropus agilis","occurrenceCount":16,"georeferencedCount":16,"scientificNameMatches":["<b>Macropus</b> agilis"],"commonNameMatches":[],"commonName":"Agile Wallabies, Agile Wallaby, Sandy Wallaby, Grass Wallaby, River Wallaby","matchedNames":["Macropus agilis"],"rankId":7000,"rankString":"species","left":402753,"right":402760},{"guid":"urn:lsid:biodiversity.org.au:afd.taxon:6e8e49d5-da08-4567-9b18-429bd6a53237","name":"Macropus fuliginosus","occurrenceCount":26,"georeferencedCount":26,"scientificNameMatches":["<b>Macropus</b> fuliginosus"],"commonNameMatches":[],"commonName":" Kangaroo Island Western Grey Kangaroo,  Western Grey Kangaroo, Males Are Known As Stinkers Due To Their Strong, Curry-like Smell., Western Gray Kangaroo, Western Grey Kangaroo","matchedNames":["Macropus fuliginosus"],"rankId":7000,"rankString":"species","left":402787,"right":402792},{"guid":"urn:lsid:biodiversity.org.au:afd.taxon:43639327-3bc9-43ae-861b-e0f982b1a8b2","name":"Macropus giganteus","occurrenceCount":230,"georeferencedCount":230,"scientificNameMatches":["<b>Macropus</b> giganteus"],"commonNameMatches":[],"commonName":"Eastern Grey Kangaroo, Great Grey Kangaroo, Scrub Kangaroo, Grey Kangaroo","matchedNames":["Macropus giganteus"],"rankId":7000,"rankString":"species","left":402783,"right":402784},{"guid":"urn:lsid:biodiversity.org.au:afd.taxon:102c2bde-cebf-4de7-9cfd-79c68a0b54bb","name":"Macropus rufogriseus","occurrenceCount":64,"georeferencedCount":64,"scientificNameMatches":["<b>Macropus</b> rufogriseus"],"commonNameMatches":[],"commonName":" Bennett's Wallaby, Brush Wallaby, Brush Kangaroo, Brusher, Red Wallaby., Necked Wallaby, Red-necked Wallaby, Red-necked Wallaby And Joey","matchedNames":["Macropus rufogriseus"],"rankId":7000,"rankString":"species","left":402793,"right":402798},{"guid":"urn:lsid:biodiversity.org.au:afd.taxon:dc05eac3-96ff-4f94-b0bd-f090f264718b","name":"Macropus parryi","occurrenceCount":9,"georeferencedCount":9,"scientificNameMatches":["<b>Macropus</b> parryi"],"commonNameMatches":[],"commonName":"Pretty-face Wallaby, Pretty-faced Wallaby, Whiptail Wallaby","matchedNames":["Macropus parryi"],"rankId":7000,"rankString":"species","left":402751,"right":402752}]};
       var right = {"autoCompleteList":[{"commonName":null,"commonNameMatches":[],"georeferencedCount":0,"guid":"urn:lsid:biodiversity.org.au:afd.taxon:9e6a0bba-de5b-4465-8544-aa8fe3943fab","matchedNames":["Macropus"],"name":"Macropus","occurrenceCount":0,"rankID":6000,"rankString":"genus","scientificNameMatches":["<b>Macropus<\u002fb>"]},{"commonName":"Western Brush Wallaby","commonNameMatches":[],"georeferencedCount":0,"guid":"urn:lsid:biodiversity.org.au:afd.taxon:fe69ffcc-a108-4675-a25c-f4428203e4de","matchedNames":["Macropus irma"],"name":"Macropus irma","occurrenceCount":0,"rankID":7000,"rankString":"species","scientificNameMatches":["<b>Macropus<\u002fb> irma"]},{"commonName":"Whiptail Wallaby","commonNameMatches":[],"georeferencedCount":0,"guid":"urn:lsid:biodiversity.org.au:afd.taxon:dc05eac3-96ff-4f94-b0bd-f090f264718b","matchedNames":["Macropus parryi"],"name":"Macropus parryi","occurrenceCount":0,"rankID":7000,"rankString":"species","scientificNameMatches":["<b>Macropus<\u002fb> parryi"]},{"commonName":"Eastern Grey Kangaroo","commonNameMatches":[],"georeferencedCount":0,"guid":"urn:lsid:biodiversity.org.au:afd.taxon:43639327-3bc9-43ae-861b-e0f982b1a8b2","matchedNames":["Macropus giganteus"],"name":"Macropus giganteus","occurrenceCount":0,"rankID":7000,"rankString":"species","scientificNameMatches":["<b>Macropus<\u002fb> giganteus"]},{"commonName":null,"commonNameMatches":[],"georeferencedCount":0,"guid":"urn:lsid:biodiversity.org.au:afd.taxon:575f92ea-f72d-424b-8f4b-4d12359188d7","matchedNames":["Macropus eugenii eugenii"],"name":"Macropus eugenii eugenii","occurrenceCount":0,"rankID":8000,"rankString":"subspecies","scientificNameMatches":["<b>Macropus<\u002fb> eugenii eugenii"]},{"commonName":null,"commonNameMatches":[],"georeferencedCount":0,"guid":"urn:lsid:biodiversity.org.au:afd.taxon:ff0a0d19-8d0e-4067-b210-4d0b3f7d9ba9","matchedNames":["Macropus fuliginosus fuliginosus"],"name":"Macropus fuliginosus fuliginosus","occurrenceCount":0,"rankID":8000,"rankString":"subspecies","scientificNameMatches":["<b>Macropus<\u002fb> fuliginosus fuliginosus"]},{"commonName":null,"commonNameMatches":[],"georeferencedCount":0,"guid":"urn:lsid:biodiversity.org.au:afd.taxon:0bf79753-c526-42bb-a43d-d5f5f97f2f90","matchedNames":["Macropus agilis agilis"],"name":"Macropus agilis agilis","occurrenceCount":0,"rankID":8000,"rankString":"subspecies","scientificNameMatches":["<b>Macropus<\u002fb> agilis agilis"]},{"commonName":null,"commonNameMatches":[],"georeferencedCount":0,"guid":"urn:lsid:biodiversity.org.au:afd.taxon:cd2f60f5-cb6d-48f6-bc06-0dc796bd6c7f","matchedNames":["Macropus agilis jardinii"],"name":"Macropus agilis jardinii","occurrenceCount":0,"rankID":8000,"rankString":"subspecies","scientificNameMatches":["<b>Macropus<\u002fb> agilis jardinii"]},{"commonName":null,"commonNameMatches":[],"georeferencedCount":0,"guid":"urn:lsid:biodiversity.org.au:afd.taxon:2da83de9-a0e2-486f-b228-4e40a606bcf4","matchedNames":["Macropus robustus robustus"],"name":"Macropus robustus robustus","occurrenceCount":0,"rankID":8000,"rankString":"subspecies","scientificNameMatches":["<b>Macropus<\u002fb> robustus robustus"]},{"commonName":null,"commonNameMatches":[],"georeferencedCount":0,"guid":"urn:lsid:biodiversity.org.au:afd.taxon:352dd6e7-86e1-4745-86fb-7871993bdb17","matchedNames":["Macropus robustus woodwardi"],"name":"Macropus robustus woodwardi","occurrenceCount":0,"rankID":8000,"rankString":"subspecies","scientificNameMatches":["<b>Macropus<\u002fb> robustus woodwardi"]}]};
+      var leftSchema = {
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "autoCompleteList": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "guid",
+          "name",
+          "occurrenceCount",
+          "georeferencedCount",
+          "commonName",
+          "rankId",
+          "rankString",
+          "left",
+          "right"
+        ],
+        "properties": {
+          "guid": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "occurrenceCount": {
+            "type": "number"
+          },
+          "georeferencedCount": {
+            "type": "number"
+          },
+          "scientificNameMatches": {
+            "type": "array",
+            "items": {
+              "required": [],
+              "properties": {}
+            }
+          },
+          "commonNameMatches": {
+            "type": "array",
+            "items": {
+              "required": [],
+              "properties": {}
+            }
+          },
+          "commonName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "matchedNames": {
+            "type": "array",
+            "items": {
+              "required": [],
+              "properties": {}
+            }
+          },
+          "rankId": {
+            "type": "number"
+          },
+          "rankString": {
+            "type": "string",
+            "minLength": 1
+          },
+          "left": {
+            "type": "number"
+          },
+          "right": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "autoCompleteList"
+  ]
+};
+      var rightSchema = {
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "autoCompleteList": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "georeferencedCount",
+          "guid",
+          "name",
+          "occurrenceCount",
+          "rankID",
+          "rankString"
+        ],
+        "properties": {
+          "commonName": {},
+          "commonNameMatches": {
+            "type": "array",
+            "items": {
+              "required": [],
+              "properties": {}
+            }
+          },
+          "georeferencedCount": {
+            "type": "number"
+          },
+          "guid": {
+            "type": "string",
+            "minLength": 1
+          },
+          "matchedNames": {
+            "type": "array",
+            "items": {
+              "required": [],
+              "properties": {}
+            }
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "occurrenceCount": {
+            "type": "number"
+          },
+          "rankID": {
+            "type": "number"
+          },
+          "rankString": {
+            "type": "string",
+            "minLength": 1
+          },
+          "scientificNameMatches": {
+            "type": "array",
+            "items": {
+              "required": [],
+              "properties": {}
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "autoCompleteList"
+  ]
+};
       var instance = jsondiffpatch.create({
         objectHash: function(obj, index) {
           if (typeof obj.guid !== 'undefined') {
@@ -95,14 +289,25 @@
         }
       });
       var delta = instance.diff(left, right);
+      var schemaDelta = instance.diff(leftSchema, rightSchema);
       // beautiful html diff
-      document.getElementById('visual').innerHTML = jsondiffpatch.formatters.html.format(delta, left);
-      jsondiffpatch.formatters.html.showUnchanged($('#showunchanged').is(':checked'), null, 800);
-      $('#showunchanged').on('change', function() {
+      document.getElementById('data-visual').innerHTML = jsondiffpatch.formatters.html.format(delta, left);
+      document.getElementById('schema-visual').innerHTML = jsondiffpatch.formatters.html.format(schemaDelta, leftSchema);
+      jsondiffpatch.formatters.html.showUnchanged($('#show-unchanged').is(':checked'), null, 800);
+      $('#show-unchanged').on('change', function() {
         jsondiffpatch.formatters.html.showUnchanged($(this).is(':checked'), null, 800);
       });
+
+      $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        jsondiffpatch.formatters.html.showUnchanged($('#show-unchanged').is(':checked'), null, 800);
+      });
+
       // self-explained json
       // document.getElementById('annotated').innerHTML = jsondiffpatch.formatters.annotated.format(delta, left);
+      // var leftFake = jsf(leftSchema);
+      // var rightFake = jsf(leftSchema);
+      // var fakeDelta = instance.diff(leftFake, rightFake);
+      // document.getElementById('fake-visual').innerHTML = jsondiffpatch.formatters.html.format(fakeDelta, leftFake);
     </script>
     </body>
 </html>

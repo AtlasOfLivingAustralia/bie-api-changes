@@ -1,0 +1,425 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "taxonConcept": {
+      "type": "object",
+      "properties": {
+        "guid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "parentGuid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "nameString": {
+          "type": "string",
+          "minLength": 1
+        },
+        "nameComplete": {
+          "type": "string",
+          "minLength": 1
+        },
+        "nameFormatted": {
+          "type": "string",
+          "minLength": 1
+        },
+        "author": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rankString": {
+          "type": "string",
+          "minLength": 1
+        },
+        "nameAuthority": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rankID": {
+          "type": "number"
+        },
+        "namePublishedIn": {},
+        "namePublishedInYear": {},
+        "namePublishedInID": {},
+        "infoSourceURL": {
+          "type": "string",
+          "minLength": 1
+        },
+        "datasetURL": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "guid",
+        "parentGuid",
+        "nameString",
+        "nameComplete",
+        "nameFormatted",
+        "author",
+        "rankString",
+        "nameAuthority",
+        "rankID",
+        "infoSourceURL",
+        "datasetURL"
+      ]
+    },
+    "taxonName": {
+      "type": "array",
+      "items": {
+        "required": [],
+        "properties": {}
+      }
+    },
+    "classification": {
+      "type": "object",
+      "properties": {
+        "class": {
+          "type": "string",
+          "minLength": 1
+        },
+        "family": {
+          "type": "string",
+          "minLength": 1
+        },
+        "genus": {
+          "type": "string",
+          "minLength": 1
+        },
+        "higher_taxon": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kingdom": {
+          "type": "string",
+          "minLength": 1
+        },
+        "order": {
+          "type": "string",
+          "minLength": 1
+        },
+        "phylum": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subclass": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subfamily": {
+          "type": "string",
+          "minLength": 1
+        },
+        "suborder": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subphylum": {
+          "type": "string",
+          "minLength": 1
+        },
+        "superfamily": {
+          "type": "string",
+          "minLength": 1
+        },
+        "classGuid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "familyGuid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "genusGuid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "higher_taxonGuid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kingdomGuid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "orderGuid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "phylumGuid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subclassGuid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subfamilyGuid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "suborderGuid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subphylumGuid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "superfamilyGuid": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "class",
+        "family",
+        "genus",
+        "higher_taxon",
+        "kingdom",
+        "order",
+        "phylum",
+        "subclass",
+        "subfamily",
+        "suborder",
+        "subphylum",
+        "superfamily",
+        "classGuid",
+        "familyGuid",
+        "genusGuid",
+        "higher_taxonGuid",
+        "kingdomGuid",
+        "orderGuid",
+        "phylumGuid",
+        "subclassGuid",
+        "subfamilyGuid",
+        "suborderGuid",
+        "subphylumGuid",
+        "superfamilyGuid"
+      ]
+    },
+    "synonyms": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "nameString",
+          "nameComplete",
+          "nameFormatted",
+          "nameGuid",
+          "nameAuthority",
+          "infoSourceURL",
+          "datasetURL"
+        ],
+        "properties": {
+          "nameString": {
+            "type": "string",
+            "minLength": 1
+          },
+          "nameComplete": {
+            "type": "string",
+            "minLength": 1
+          },
+          "nameFormatted": {
+            "type": "string",
+            "minLength": 1
+          },
+          "nameGuid": {
+            "type": "string",
+            "minLength": 1
+          },
+          "namePublishedIn": {},
+          "namePublishedInYear": {},
+          "namePublishedInID": {},
+          "nameAuthority": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceURL": {
+            "type": "string",
+            "minLength": 1
+          },
+          "datasetURL": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "commonNames": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "nameString",
+          "status",
+          "priority",
+          "language",
+          "infoSourceName",
+          "infoSourceURL",
+          "datasetURL"
+        ],
+        "properties": {
+          "nameString": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "minLength": 1
+          },
+          "priority": {
+            "type": "number"
+          },
+          "language": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceURL": {
+            "type": "string",
+            "minLength": 1
+          },
+          "datasetURL": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "imageIdentifier": {
+      "type": "string",
+      "minLength": 1
+    },
+    "conservationStatuses": {
+      "type": "object",
+      "properties": {
+        "QLD": {
+          "type": "object",
+          "properties": {
+            "dr": {
+              "type": "string",
+              "minLength": 1
+            },
+            "status": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "dr",
+            "status"
+          ]
+        }
+      },
+      "required": [
+        "QLD"
+      ]
+    },
+    "extantStatuses": {
+      "type": "array",
+      "items": {
+        "required": [],
+        "properties": {}
+      }
+    },
+    "habitats": {
+      "type": "array",
+      "items": {
+        "required": [],
+        "properties": {}
+      }
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "required": [],
+        "properties": {}
+      }
+    },
+    "simpleProperties": {
+      "type": "array",
+      "items": {
+        "required": [],
+        "properties": {}
+      }
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "required": [],
+        "properties": {}
+      }
+    },
+    "identifiers": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "identifier",
+          "nameString",
+          "status",
+          "format",
+          "infoSourceName",
+          "infoSourceURL",
+          "datasetURL"
+        ],
+        "properties": {
+          "identifier": {
+            "type": "string",
+            "minLength": 1
+          },
+          "nameString": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "minLength": 1
+          },
+          "subject": {},
+          "format": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "infoSourceURL": {
+            "type": "string",
+            "minLength": 1
+          },
+          "datasetURL": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "taxonConcept",
+    "taxonName",
+    "classification",
+    "synonyms",
+    "commonNames",
+    "imageIdentifier",
+    "conservationStatuses",
+    "extantStatuses",
+    "habitats",
+    "categories",
+    "simpleProperties",
+    "images",
+    "identifiers"
+  ]
+}

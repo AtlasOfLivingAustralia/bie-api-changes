@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "searchResults": {
+      "type": "object",
+      "properties": {
+        "totalRecords": {
+          "type": "number"
+        },
+        "facetResults": {
+          "type": "array",
+          "items": {
+            "required": [],
+            "properties": {}
+          }
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "required": [],
+            "properties": {}
+          }
+        },
+        "queryTitle": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "totalRecords",
+        "facetResults",
+        "results",
+        "queryTitle"
+      ]
+    }
+  },
+  "required": [
+    "searchResults"
+  ]
+}

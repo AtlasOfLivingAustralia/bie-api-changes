@@ -38,18 +38,59 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-12">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">JSON Diff</h3>
-            </div>
-            <div class="panel-body">
-              <div class="header-options">
-                <input id="showunchanged" type="checkbox" checked>
-                <label for="showunchanged">
-                  Show unchanged values
-                </label>
+          <div class="header-options">
+            <input id="show-unchanged" class="show-unchanged" type="checkbox" checked>
+            <label for="show-unchanged">
+              Show unchanged values
+            </label>
+          </div>
+          <div>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#data" aria-controls="data" role="tab" data-toggle="tab">Data</a></li>
+              <li role="presentation"><a href="#schema" aria-controls="schema" role="tab" data-toggle="tab">Schema</a></li>
+              <!-- <li role="presentation"><a href="#fake" aria-controls="fake" role="tab" data-toggle="tab">Fake Date</a></li> -->
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="data">
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">JSON Data Diff</h3>
+                  </div>
+                  <div class="panel-body">
+                    <div id="data-visual">
+                    </div>
+                  </div>
+                </div>
+
               </div>
-              <div id="visual">
+              <div role="tabpanel" class="tab-pane" id="schema">
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">JSON Schema Diff</h3>
+                  </div>
+                  <div class="panel-body">
+                    <div id="schema-visual">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div role="tabpanel" class="tab-pane" id="fake">
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Faked JSON Data Diff</h3>
+                  </div>
+                  <div class="panel-body">
+                    <div id="fake-visual">
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
@@ -78,10 +119,78 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsondiffpatch/0.1.43/jsondiffpatch-full.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsondiffpatch/0.1.43/jsondiffpatch-formatters.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/json-schema-faker/0.3.4/json-schema-faker.min.js"></script>
     <script type="text/javascript">
       "use strict";
       var left = [{"scientificName":"ANIMALIA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:4647863b-760d-4b59-aaa1-502c8cdf8d3c","rank":"kingdom","rawRank":"Kingdom"},{"scientificName":"CHORDATA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:065f1da4-53cd-40b8-a396-80fa5c74dedd","rank":"phylum","rawRank":"Phylum"},{"scientificName":"VERTEBRATA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:5d6076b1-b7c7-487f-9d61-0fea0111cc7e","rank":"subphylum","rawRank":"SubPhylum"},{"scientificName":"GNATHOSTOMATA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:ef5515fd-a0a2-4e16-b61a-0f19f8900f76","rank":"suprageneric","rawRank":"Higher Taxon"},{"scientificName":"MAMMALIA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:e9e7db31-04df-41fb-bd8d-e0b0f3c332d6","rank":"class","rawRank":"Class"},{"scientificName":"MARSUPIALIA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:602afec4-950f-4961-9ad0-74793be8efbf","rank":"subclass","rawRank":"SubClass"},{"scientificName":"DIPROTODONTIA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:6d8079f1-edc9-4aab-aabd-232a32b42471","rank":"order","rawRank":"Order"},{"scientificName":"PHALANGERIDA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:e6733776-808c-4aff-9758-e33223c5029f","rank":"suborder","rawRank":"SubOrder"},{"scientificName":"MACROPODOIDEA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:894143f7-f712-40e1-96f1-418c93755acc","rank":"superfamily","rawRank":"SuperFamily"},{"scientificName":"MACROPODIDAE","guid":"urn:lsid:biodiversity.org.au:afd.taxon:72a1c39f-2435-4c28-a680-714b69ded6f9","rank":"family","rawRank":"Family"},{"scientificName":"MACROPODINAE","guid":"urn:lsid:biodiversity.org.au:afd.taxon:b5affee1-2306-4626-8d36-cfe961547d87","rank":"subfamily","rawRank":"SubFamily"},{"scientificName":"Macropus","guid":"urn:lsid:biodiversity.org.au:afd.taxon:9e6a0bba-de5b-4465-8544-aa8fe3943fab","rank":"genus","rawRank":"Genus"},{"scientificName":"Macropus rufus","guid":"urn:lsid:biodiversity.org.au:afd.taxon:31a9b8b8-4e8f-4343-a15f-2ed24e0bf1ae","rank":"species","rawRank":"Species"}];
       var right = [{"rank":"kingdom","rankID":1000,"scientificName":"ANIMALIA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:4647863b-760d-4b59-aaa1-502c8cdf8d3c"},{"rank":"phylum","rankID":2000,"scientificName":"CHORDATA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:065f1da4-53cd-40b8-a396-80fa5c74dedd"},{"rank":"subphylum","rankID":-1,"scientificName":"VERTEBRATA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:5d6076b1-b7c7-487f-9d61-0fea0111cc7e"},{"rank":"higher taxon","rankID":0,"scientificName":"GNATHOSTOMATA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:ef5515fd-a0a2-4e16-b61a-0f19f8900f76"},{"rank":"class","rankID":3000,"scientificName":"MAMMALIA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:e9e7db31-04df-41fb-bd8d-e0b0f3c332d6"},{"rank":"subclass","rankID":3200,"scientificName":"MARSUPIALIA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:602afec4-950f-4961-9ad0-74793be8efbf"},{"rank":"order","rankID":4000,"scientificName":"DIPROTODONTIA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:bd223248-af12-4ce9-9380-4f9a85be38db"},{"rank":"suborder","rankID":4200,"scientificName":"PHALANGERIDA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:e6733776-808c-4aff-9758-e33223c5029f"},{"rank":"superfamily","rankID":4500,"scientificName":"MACROPODOIDEA","guid":"urn:lsid:biodiversity.org.au:afd.taxon:894143f7-f712-40e1-96f1-418c93755acc"},{"rank":"family","rankID":5000,"scientificName":"MACROPODIDAE","guid":"urn:lsid:biodiversity.org.au:afd.taxon:72e28d9f-375f-4728-bd99-d2b2a5d1f1f2"},{"rank":"subfamily","rankID":5500,"scientificName":"MACROPODINAE","guid":"urn:lsid:biodiversity.org.au:afd.taxon:b5affee1-2306-4626-8d36-cfe961547d87"},{"rank":"genus","rankID":6000,"scientificName":"Macropus","guid":"urn:lsid:biodiversity.org.au:afd.taxon:9e6a0bba-de5b-4465-8544-aa8fe3943fab"},{"rank":"species","rankID":7000,"scientificName":"Macropus rufus","guid":"urn:lsid:biodiversity.org.au:afd.taxon:31a9b8b8-4e8f-4343-a15f-2ed24e0bf1ae"}];
+      var leftSchema = {
+  "type": "array",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "type": "object",
+    "required": [
+      "scientificName",
+      "guid",
+      "rank",
+      "rawRank"
+    ],
+    "properties": {
+      "scientificName": {
+        "type": "string",
+        "minLength": 1
+      },
+      "guid": {
+        "type": "string",
+        "minLength": 1
+      },
+      "rank": {
+        "type": "string",
+        "minLength": 1
+      },
+      "rawRank": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+};
+      var rightSchema = {
+  "type": "array",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "type": "object",
+    "required": [
+      "rank",
+      "rankID",
+      "scientificName",
+      "guid"
+    ],
+    "properties": {
+      "rank": {
+        "type": "string",
+        "minLength": 1
+      },
+      "rankID": {
+        "type": "number"
+      },
+      "scientificName": {
+        "type": "string",
+        "minLength": 1
+      },
+      "guid": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+};
       var instance = jsondiffpatch.create({
         objectHash: function(obj, index) {
           if (typeof obj.guid !== 'undefined') {
@@ -104,14 +213,25 @@
         }
       });
       var delta = instance.diff(left, right);
+      var schemaDelta = instance.diff(leftSchema, rightSchema);
       // beautiful html diff
-      document.getElementById('visual').innerHTML = jsondiffpatch.formatters.html.format(delta, left);
-      jsondiffpatch.formatters.html.showUnchanged($('#showunchanged').is(':checked'), null, 800);
-      $('#showunchanged').on('change', function() {
+      document.getElementById('data-visual').innerHTML = jsondiffpatch.formatters.html.format(delta, left);
+      document.getElementById('schema-visual').innerHTML = jsondiffpatch.formatters.html.format(schemaDelta, leftSchema);
+      jsondiffpatch.formatters.html.showUnchanged($('#show-unchanged').is(':checked'), null, 800);
+      $('#show-unchanged').on('change', function() {
         jsondiffpatch.formatters.html.showUnchanged($(this).is(':checked'), null, 800);
       });
+
+      $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        jsondiffpatch.formatters.html.showUnchanged($('#show-unchanged').is(':checked'), null, 800);
+      });
+
       // self-explained json
       // document.getElementById('annotated').innerHTML = jsondiffpatch.formatters.annotated.format(delta, left);
+      // var leftFake = jsf(leftSchema);
+      // var rightFake = jsf(leftSchema);
+      // var fakeDelta = instance.diff(leftFake, rightFake);
+      // document.getElementById('fake-visual').innerHTML = jsondiffpatch.formatters.html.format(fakeDelta, leftFake);
     </script>
     </body>
 </html>

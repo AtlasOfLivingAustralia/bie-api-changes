@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "autoCompleteList": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "georeferencedCount",
+          "guid",
+          "name",
+          "occurrenceCount",
+          "rankID",
+          "rankString"
+        ],
+        "properties": {
+          "commonName": {},
+          "commonNameMatches": {
+            "type": "array",
+            "items": {
+              "required": [],
+              "properties": {}
+            }
+          },
+          "georeferencedCount": {
+            "type": "number"
+          },
+          "guid": {
+            "type": "string",
+            "minLength": 1
+          },
+          "matchedNames": {
+            "type": "array",
+            "items": {
+              "required": [],
+              "properties": {}
+            }
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "occurrenceCount": {
+            "type": "number"
+          },
+          "rankID": {
+            "type": "number"
+          },
+          "rankString": {
+            "type": "string",
+            "minLength": 1
+          },
+          "scientificNameMatches": {
+            "type": "array",
+            "items": {
+              "required": [],
+              "properties": {}
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "autoCompleteList"
+  ]
+}

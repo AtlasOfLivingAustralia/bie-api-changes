@@ -6,8 +6,8 @@
   @Grab(group='com.atlassian.commonmark', module='commonmark-ext-autolink', version='0.6.0'),
   @Grab(group='io.reactivex', module='rxjava-file-utils', version='0.1.4'),
   @Grab(group='io.reactivex', module='rxgroovy', version='1.0.3'),
-  @Grab(group='org.freemarker', module='freemarker', version='2.3.25-incubating'),
   @Grab(group='org.apache.commons', module='commons-lang3', version='3.4'),
+  @Grab(group='org.freemarker', module='freemarker', version='2.3.25-incubating'),
   @Grab(group='org.slf4j', module='slf4j-api', version='1.7.21'),
   @Grab(group='org.slf4j', module='slf4j-simple', version='1.7.21')
 ])
@@ -21,6 +21,7 @@ import org.apache.commons.lang3.*
 import org.commonmark.html.*
 import org.commonmark.node.*
 import org.commonmark.parser.*
+import org.jsonschema2pojo.*
 import rx.fileutils.*
 import rx.schedulers.*
 
@@ -46,6 +47,7 @@ class Runner {
     def watch = argsSet.contains('--watch')
     def skip = argsSet.contains('--skip')
 
+    run('npm','install')
     initFreemarker()
     generateDocs(skip, uris)
 
@@ -141,6 +143,18 @@ class Runner {
                     notes: notes ]
     }
 
+    log.info("Generating schemata")
+    results.findAll { !it.error && it.content == 'application/json' }.each {
+      try {
+        final oldSchema = generateSchema(it.name, 'old')
+        final newSchema = generateSchema(it.name, 'new')
+        it << [ newSchema: newSchema, oldSchema: oldSchema ]
+      } catch (e) {
+        log.error("Couldn't generate schemata for ${it.name}", e)
+        it.error = true
+      }
+    }
+
     log.info("Converting results")
     def items = results.collect {
       final markedNotes
@@ -199,6 +213,10 @@ class Runner {
     run([1].toSet(), 'diff', '-u', before.absolutePath, after.absolutePath)
   }
 
+  static run(String... command) {
+    run([0].toSet(), command)
+  }
+
   static run(Set<Integer> exitValues, String... command) {
     def process = new ProcessBuilder(command.toList()).start()
     def result = process.inputStream.getText('utf-8')
@@ -253,5 +271,18 @@ class Runner {
       case 'text/csv': return 'csv'
       default: throw new RuntimeException("Unknown content type: $contentType")
     }
+  }
+
+  static generateSchema(String name, String type) {
+    final destName = "${name}.${type}.schema.json"
+    final srcName = "${name}.${type}.json"
+    final dest = new File(destName)
+    final src = new File(srcName)
+    if (!dest.exists() || src.lastModified() > dest.lastModified()) {
+      log.info("Generating schemas for $name")
+      run('node_modules/json-schema-generator/bin/cli.js', '--file', srcName, '--o', destName)
+    }
+
+    return dest.text
   }
 }

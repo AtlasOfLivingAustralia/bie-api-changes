@@ -33,18 +33,59 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-12">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">JSON Diff</h3>
-            </div>
-            <div class="panel-body">
-              <div class="header-options">
-                <input id="showunchanged" type="checkbox" checked>
-                <label for="showunchanged">
-                  Show unchanged values
-                </label>
+          <div class="header-options">
+            <input id="show-unchanged" class="show-unchanged" type="checkbox" checked>
+            <label for="show-unchanged">
+              Show unchanged values
+            </label>
+          </div>
+          <div>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#data" aria-controls="data" role="tab" data-toggle="tab">Data</a></li>
+              <li role="presentation"><a href="#schema" aria-controls="schema" role="tab" data-toggle="tab">Schema</a></li>
+              <!-- <li role="presentation"><a href="#fake" aria-controls="fake" role="tab" data-toggle="tab">Fake Date</a></li> -->
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="data">
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">JSON Data Diff</h3>
+                  </div>
+                  <div class="panel-body">
+                    <div id="data-visual">
+                    </div>
+                  </div>
+                </div>
+
               </div>
-              <div id="visual">
+              <div role="tabpanel" class="tab-pane" id="schema">
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">JSON Schema Diff</h3>
+                  </div>
+                  <div class="panel-body">
+                    <div id="schema-visual">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div role="tabpanel" class="tab-pane" id="fake">
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Faked JSON Data Diff</h3>
+                  </div>
+                  <div class="panel-body">
+                    <div id="fake-visual">
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
@@ -73,10 +114,291 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsondiffpatch/0.1.43/jsondiffpatch-full.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsondiffpatch/0.1.43/jsondiffpatch-formatters.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/json-schema-faker/0.3.4/json-schema-faker.min.js"></script>
     <script type="text/javascript">
       "use strict";
       var left = [{"guid":"urn:lsid:biodiversity.org.au:afd.taxon:31a9b8b8-4e8f-4343-a15f-2ed24e0bf1ae","name":"Macropus rufus","idxType":"TAXON","score":11.555554,"parentGuid":"urn:lsid:biodiversity.org.au:afd.taxon:9e6a0bba-de5b-4465-8544-aa8fe3943fab","commonName":"Plains Kangaroo, Red Kangaroo","nameComplete":"Macropus rufus","commonNameSingle":"Red Kangaroo","hasChildren":false,"rank":"species","rankId":7000,"rawRank":"Species","conservationStatus":"Least Concern","isAustralian":"recorded","highlight":"<strong>macropus rufus</strong>","image":"http://bie.ala.org.au/repo/1013/128/1280064/raw.jpg","thumbnail":"http://bie.ala.org.au/repo/1013/128/1280064/thumbnail.jpg","left":402747,"right":402748,"kingdom":"ANIMALIA","phylum":"CHORDATA","classs":"MAMMALIA","order":"DIPROTODONTIA","family":"MACROPODIDAE","genus":"Macropus","author":"(Desmarest, 1822)","linkIdentifier":"Macropus+rufus","imageSource":"dr360","imageCount":39,"isExcluded":false,"largeImageUrl":"http://bie.ala.org.au/repo/1013/128/1280064/largeRaw.jpg","smallImageUrl":"http://bie.ala.org.au/repo/1013/128/1280064/smallRaw.jpg","thumbnailUrl":"http://bie.ala.org.au/repo/1013/128/1280064/thumbnail.jpg","imageMetadataUrl":"http://bie.ala.org.au/repo/1013/128/1280064/dc"},{"guid":"urn:lsid:biodiversity.org.au:afd.taxon:c42a3e19-eeff-4282-8366-ab3ee2f4f73c","name":"Macropus greyi","idxType":"TAXON","score":12.197734,"parentGuid":"urn:lsid:biodiversity.org.au:afd.taxon:9e6a0bba-de5b-4465-8544-aa8fe3943fab","commonName":"Toolache Wallaby, Tooloche Wallaby","nameComplete":"Macropus greyi","commonNameSingle":"Toolache Wallaby","hasChildren":false,"rank":"species","rankId":7000,"rawRank":"Species","conservationStatus":"Extinct","conservationStatusAUS":"Extinct","conservationStatusSA":"Extinct or Endangered","isAustralian":"recorded","highlight":"<strong>macropus greyi</strong>","image":"http://bie.ala.org.au/repo/1036/173/1735939/raw.jpg","thumbnail":"http://bie.ala.org.au/repo/1036/173/1735939/thumbnail.jpg","left":402745,"right":402746,"kingdom":"ANIMALIA","phylum":"CHORDATA","classs":"MAMMALIA","order":"DIPROTODONTIA","family":"MACROPODIDAE","genus":"Macropus","author":"Waterhouse, 1845","linkIdentifier":"Macropus+greyi","imageSource":"dr415","imageCount":1,"isExcluded":false,"largeImageUrl":"http://bie.ala.org.au/repo/1036/173/1735939/largeRaw.jpg","smallImageUrl":"http://bie.ala.org.au/repo/1036/173/1735939/smallRaw.jpg","thumbnailUrl":"http://bie.ala.org.au/repo/1036/173/1735939/thumbnail.jpg","imageMetadataUrl":"http://bie.ala.org.au/repo/1036/173/1735939/dc"}];
       var right = [{"acceptedConceptGuid":"urn:lsid:biodiversity.org.au:afd.taxon:31a9b8b8-4e8f-4343-a15f-2ed24e0bf1ae","acceptedConceptName":"Macropus rufus (Desmarest, 1822)","author":"Rothschild, 1905","classs":null,"commonName":null,"conservationStatus":{},"family":null,"genus":null,"guid":"urn:lsid:biodiversity.org.au:afd.name:450930","highlight":null,"idxType":"TAXON","image":null,"imageMetadataUrl":null,"imageUrl":null,"kingdom":null,"largeImageUrl":null,"linkIdentifier":"Macropus+rufus+dissimulatus","name":"Macropus rufus dissimulatus","nameComplete":"Macropus rufus dissimulatus Rothschild, 1905","order":null,"parentGuid":null,"phylum":null,"rank":"species","rankId":7000,"score":1.2732127,"smallImageUrl":null,"taxonomicStatus":"synonym","thumbnailUrl":null},{"acceptedConceptGuid":null,"acceptedConceptName":null,"author":"Waterhouse, 1845","classs":"MAMMALIA","commonName":"Toolache Wallaby","conservationStatus":{"conservationStatusAUS":"Extinct","conservationStatusSA":"Endangered"},"family":"MACROPODIDAE","genus":"Macropus","guid":"urn:lsid:biodiversity.org.au:afd.taxon:c42a3e19-eeff-4282-8366-ab3ee2f4f73c","highlight":null,"idxType":"TAXON","image":"30737d56-4478-4d87-9341-a9726d317ee0","imageMetadataUrl":"dc","imageUrl":null,"kingdom":"ANIMALIA","largeImageUrl":"30737d56-4478-4d87-9341-a9726d317ee0","linkIdentifier":"Macropus+greyi","name":"Macropus greyi","nameComplete":"Macropus greyi Waterhouse, 1845","order":"DIPROTODONTIA","parentGuid":"urn:lsid:biodiversity.org.au:afd.taxon:9e6a0bba-de5b-4465-8544-aa8fe3943fab","phylum":"CHORDATA","rank":"species","rankId":7000,"score":0.9090754,"smallImageUrl":"30737d56-4478-4d87-9341-a9726d317ee0","taxonomicStatus":"accepted","thumbnailUrl":"30737d56-4478-4d87-9341-a9726d317ee0"}];
+      var leftSchema = {
+  "type": "array",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "type": "object",
+    "required": [
+      "guid",
+      "name",
+      "idxType",
+      "score",
+      "parentGuid",
+      "commonName",
+      "nameComplete",
+      "commonNameSingle",
+      "hasChildren",
+      "rank",
+      "rankId",
+      "rawRank",
+      "conservationStatus",
+      "conservationStatusAUS",
+      "conservationStatusSA",
+      "isAustralian",
+      "highlight",
+      "image",
+      "thumbnail",
+      "left",
+      "right",
+      "kingdom",
+      "phylum",
+      "classs",
+      "order",
+      "family",
+      "genus",
+      "author",
+      "linkIdentifier",
+      "imageSource",
+      "imageCount",
+      "isExcluded",
+      "largeImageUrl",
+      "smallImageUrl",
+      "thumbnailUrl",
+      "imageMetadataUrl"
+    ],
+    "properties": {
+      "guid": {
+        "type": "string",
+        "minLength": 1
+      },
+      "name": {
+        "type": "string",
+        "minLength": 1
+      },
+      "idxType": {
+        "type": "string",
+        "minLength": 1
+      },
+      "score": {
+        "type": "number"
+      },
+      "parentGuid": {
+        "type": "string",
+        "minLength": 1
+      },
+      "commonName": {
+        "type": "string",
+        "minLength": 1
+      },
+      "nameComplete": {
+        "type": "string",
+        "minLength": 1
+      },
+      "commonNameSingle": {
+        "type": "string",
+        "minLength": 1
+      },
+      "hasChildren": {
+        "type": "boolean"
+      },
+      "rank": {
+        "type": "string",
+        "minLength": 1
+      },
+      "rankId": {
+        "type": "number"
+      },
+      "rawRank": {
+        "type": "string",
+        "minLength": 1
+      },
+      "conservationStatus": {
+        "type": "string",
+        "minLength": 1
+      },
+      "conservationStatusAUS": {
+        "type": "string",
+        "minLength": 1
+      },
+      "conservationStatusSA": {
+        "type": "string",
+        "minLength": 1
+      },
+      "isAustralian": {
+        "type": "string",
+        "minLength": 1
+      },
+      "highlight": {
+        "type": "string",
+        "minLength": 1
+      },
+      "image": {
+        "type": "string",
+        "minLength": 1
+      },
+      "thumbnail": {
+        "type": "string",
+        "minLength": 1
+      },
+      "left": {
+        "type": "number"
+      },
+      "right": {
+        "type": "number"
+      },
+      "kingdom": {
+        "type": "string",
+        "minLength": 1
+      },
+      "phylum": {
+        "type": "string",
+        "minLength": 1
+      },
+      "classs": {
+        "type": "string",
+        "minLength": 1
+      },
+      "order": {
+        "type": "string",
+        "minLength": 1
+      },
+      "family": {
+        "type": "string",
+        "minLength": 1
+      },
+      "genus": {
+        "type": "string",
+        "minLength": 1
+      },
+      "author": {
+        "type": "string",
+        "minLength": 1
+      },
+      "linkIdentifier": {
+        "type": "string",
+        "minLength": 1
+      },
+      "imageSource": {
+        "type": "string",
+        "minLength": 1
+      },
+      "imageCount": {
+        "type": "number"
+      },
+      "isExcluded": {
+        "type": "boolean"
+      },
+      "largeImageUrl": {
+        "type": "string",
+        "minLength": 1
+      },
+      "smallImageUrl": {
+        "type": "string",
+        "minLength": 1
+      },
+      "thumbnailUrl": {
+        "type": "string",
+        "minLength": 1
+      },
+      "imageMetadataUrl": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+};
+      var rightSchema = {
+  "type": "array",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "type": "object",
+    "required": [
+      "acceptedConceptGuid",
+      "acceptedConceptName",
+      "author",
+      "conservationStatus",
+      "guid",
+      "idxType",
+      "linkIdentifier",
+      "name",
+      "nameComplete",
+      "rank",
+      "rankId",
+      "score",
+      "taxonomicStatus"
+    ],
+    "properties": {
+      "acceptedConceptGuid": {
+        "type": "string",
+        "minLength": 1
+      },
+      "acceptedConceptName": {
+        "type": "string",
+        "minLength": 1
+      },
+      "author": {
+        "type": "string",
+        "minLength": 1
+      },
+      "classs": {},
+      "commonName": {},
+      "conservationStatus": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "family": {},
+      "genus": {},
+      "guid": {
+        "type": "string",
+        "minLength": 1
+      },
+      "highlight": {},
+      "idxType": {
+        "type": "string",
+        "minLength": 1
+      },
+      "image": {},
+      "imageMetadataUrl": {},
+      "imageUrl": {},
+      "kingdom": {},
+      "largeImageUrl": {},
+      "linkIdentifier": {
+        "type": "string",
+        "minLength": 1
+      },
+      "name": {
+        "type": "string",
+        "minLength": 1
+      },
+      "nameComplete": {
+        "type": "string",
+        "minLength": 1
+      },
+      "order": {},
+      "parentGuid": {},
+      "phylum": {},
+      "rank": {
+        "type": "string",
+        "minLength": 1
+      },
+      "rankId": {
+        "type": "number"
+      },
+      "score": {
+        "type": "number"
+      },
+      "smallImageUrl": {},
+      "taxonomicStatus": {
+        "type": "string",
+        "minLength": 1
+      },
+      "thumbnailUrl": {}
+    }
+  }
+};
       var instance = jsondiffpatch.create({
         objectHash: function(obj, index) {
           if (typeof obj.guid !== 'undefined') {
@@ -99,14 +421,25 @@
         }
       });
       var delta = instance.diff(left, right);
+      var schemaDelta = instance.diff(leftSchema, rightSchema);
       // beautiful html diff
-      document.getElementById('visual').innerHTML = jsondiffpatch.formatters.html.format(delta, left);
-      jsondiffpatch.formatters.html.showUnchanged($('#showunchanged').is(':checked'), null, 800);
-      $('#showunchanged').on('change', function() {
+      document.getElementById('data-visual').innerHTML = jsondiffpatch.formatters.html.format(delta, left);
+      document.getElementById('schema-visual').innerHTML = jsondiffpatch.formatters.html.format(schemaDelta, leftSchema);
+      jsondiffpatch.formatters.html.showUnchanged($('#show-unchanged').is(':checked'), null, 800);
+      $('#show-unchanged').on('change', function() {
         jsondiffpatch.formatters.html.showUnchanged($(this).is(':checked'), null, 800);
       });
+
+      $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        jsondiffpatch.formatters.html.showUnchanged($('#show-unchanged').is(':checked'), null, 800);
+      });
+
       // self-explained json
       // document.getElementById('annotated').innerHTML = jsondiffpatch.formatters.annotated.format(delta, left);
+      // var leftFake = jsf(leftSchema);
+      // var rightFake = jsf(leftSchema);
+      // var fakeDelta = instance.diff(leftFake, rightFake);
+      // document.getElementById('fake-visual').innerHTML = jsondiffpatch.formatters.html.format(fakeDelta, leftFake);
     </script>
     </body>
 </html>

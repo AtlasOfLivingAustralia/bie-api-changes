@@ -1,0 +1,93 @@
+{
+  "type": "array",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "type": "object",
+    "required": [
+      "acceptedConceptGuid",
+      "acceptedConceptName",
+      "author",
+      "conservationStatus",
+      "guid",
+      "idxType",
+      "linkIdentifier",
+      "name",
+      "nameComplete",
+      "rank",
+      "rankId",
+      "score",
+      "taxonomicStatus"
+    ],
+    "properties": {
+      "acceptedConceptGuid": {
+        "type": "string",
+        "minLength": 1
+      },
+      "acceptedConceptName": {
+        "type": "string",
+        "minLength": 1
+      },
+      "author": {
+        "type": "string",
+        "minLength": 1
+      },
+      "classs": {},
+      "commonName": {},
+      "conservationStatus": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "family": {},
+      "genus": {},
+      "guid": {
+        "type": "string",
+        "minLength": 1
+      },
+      "highlight": {},
+      "idxType": {
+        "type": "string",
+        "minLength": 1
+      },
+      "image": {},
+      "imageMetadataUrl": {},
+      "imageUrl": {},
+      "kingdom": {},
+      "largeImageUrl": {},
+      "linkIdentifier": {
+        "type": "string",
+        "minLength": 1
+      },
+      "name": {
+        "type": "string",
+        "minLength": 1
+      },
+      "nameComplete": {
+        "type": "string",
+        "minLength": 1
+      },
+      "order": {},
+      "parentGuid": {},
+      "phylum": {},
+      "rank": {
+        "type": "string",
+        "minLength": 1
+      },
+      "rankId": {
+        "type": "number"
+      },
+      "score": {
+        "type": "number"
+      },
+      "smallImageUrl": {},
+      "taxonomicStatus": {
+        "type": "string",
+        "minLength": 1
+      },
+      "thumbnailUrl": {}
+    }
+  }
+}
